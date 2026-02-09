@@ -1,6 +1,8 @@
+"use client"
 import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
+import BookSlider from "@/components/sliders/BookSlider";
 
 export default function Home() {
   return (
@@ -59,8 +61,16 @@ export default function Home() {
               <li>✓ Responsive design across all pages</li>
             </ul>
           </div>
+
+
+          
         </div>
+        
       </main>
+      {/* just and example component. Use it if you like it. */}
+      {/* <BookSlider />  */}
+
+      
       
       <Footer />
     </div>
