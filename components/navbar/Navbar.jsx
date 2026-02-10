@@ -4,16 +4,15 @@ import React, { useState } from 'react';
 import { Search, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const [active, setActive] = useState('Home');
+  const [active, setActive] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Home'},
-    { name: 'Services'},
+    { name: 'Services' },
     { name: 'About' },
-    { name: 'Reviews'},
-    { name: 'Portfolio'},
-    { name: 'Contacts'},
+    { name: 'Reviews' },
+    { name: 'Portfolio' },
+    { name: 'Contacts' },
   ];
 
   return (
@@ -25,31 +24,28 @@ const Navbar = () => {
           <div className="absolute top-1 right-1 w-2 h-2 bg-gray-800 rounded-full"></div>
         </div>
         <span className="text-lg md:text-xl font-bold tracking-tight text-gray-900">
-          Goodspeed Publishing
+          Goodspeed Tech
         </span>
       </div>
 
       {/* Desktop Navigation Links */}
-      <div className="hidden md:flex items-center gap-4">
+      <div className="hidden md:flex items-center gap-2">
         {navLinks.map((link) => (
           <button
             key={link.name}
             onClick={() => setActive(link.name)}
-            className={`relative px-6 lg:px-8 py-3 lg:py-4 text-base lg:text-[18px] font-semibold transition-all duration-200 rounded-3xl flex items-center gap-1.5 text-black hover:bg-[#c2f15e] ${
-              active === link.name ? 'bg-[#c2f15e]' : ''
-            }`}
+            className={`relative px-5 lg:px-6 py-2.5 lg:py-3 text-base lg:text-[16px] font-semibold transition-all duration-200 rounded-full flex items-center gap-1.5 hover:cursor-pointer
+              ${link.name === 'Contacts'
+                ? 'bg-slate-900 text-white hover:bg-slate-800 ml-2 shadow-md hover:shadow-lg hover:-translate-y-0.5'
+                : `text-slate-700 hover:bg-[#c2f15e] hover:text-black ${active === link.name ? 'bg-[#c2f15e] text-black' : ''}`
+              }`}
           >
             {link.name}
           </button>
         ))}
       </div>
 
-      {/* Desktop Search Icon */}
-      <div className="hidden md:flex items-center justify-center w-12 h-12 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200 transition-colors">
-        <Search size={20} className="text-gray-800" />
-      </div>
-
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button - Search removed */}
       <button
         className="md:hidden flex items-center justify-center w-10 h-10 text-gray-800"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -59,7 +55,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t md:hidden">
+        <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t md:hidden z-50">
           <div className="flex flex-col p-4 space-y-2">
             {navLinks.map((link) => (
               <button
@@ -68,18 +64,15 @@ const Navbar = () => {
                   setActive(link.name);
                   setIsMenuOpen(false);
                 }}
-                className={`text-left px-4 py-3 text-base font-semibold rounded-2xl transition-all duration-200 text-black hover:bg-[#c2f15e] ${
-                  active === link.name ? 'bg-[#c2f15e]' : ''
-                }`}
+                className={`text-left px-4 py-3 text-base font-semibold rounded-2xl transition-all duration-200 
+                  ${link.name === 'Contacts'
+                    ? 'bg-slate-900 text-white hover:bg-slate-800'
+                    : `text-slate-700 hover:bg-[#c2f15e] hover:text-black ${active === link.name ? 'bg-[#c2f15e] text-black' : ''}`
+                  }`}
               >
                 {link.name}
               </button>
             ))}
-            <div className="flex justify-center pt-2">
-              <div className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full cursor-pointer hover:bg-gray-200 transition-colors">
-                <Search size={18} className="text-gray-800" />
-              </div>
-            </div>
           </div>
         </div>
       )}
