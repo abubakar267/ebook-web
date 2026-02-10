@@ -10,6 +10,7 @@ const config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "brand-green": "var(--color-brand-green)",
       },
     },
   },

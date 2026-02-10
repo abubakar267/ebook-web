@@ -2,76 +2,67 @@
 import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-import BookSlider from "@/components/sliders/BookSlider";
+import MainHeader from "../components/mainheader/MainHeader";
+import ServicesComponent from "../components/servicescomponent/ServicesComponent";
+import BookSlider from "../components/sliders/BookSlider";
+import LogoLoop from "../components/logoloop/LogoLoop";
+
+const logos = [
+  { src: "https://cdn.simpleicons.org/typescript", alt: "TypeScript", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/amazonaws/000000", alt: "AWS", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/react", alt: "React", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/nextdotjs", alt: "Next.js", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/nodedotjs", alt: "Node.js", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/tailwindcss", alt: "Tailwind CSS", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/postgresql", alt: "PostgreSQL", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/docker", alt: "Docker", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/python", alt: "Python", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/git", alt: "Git", width: 50, height: 50 },
+  { src: "https://cdn.simpleicons.org/v0", alt: "v0", width: 50, height: 50 },
+  // { src: "https://cdn.simpleicons.org/openai", alt: "OpenAI", width: 50, height: 50 },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 flex flex-col font-sans">
       <Navbar />
 
+
+
       {/* Main Content */}
-      <main className="flex-1 flex items-center justify-center px-4 py-16">
-        <div className="text-center max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
-            Welcome to Your Next.js App
-          </h1>
-          
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-            This Next.js project demonstrates multiple pages with Tailwind CSS and custom CSS styling.
-          </p>
+      <main className="flex-1 px-4 pb-4 pt-2">
+        {/* main header */}
+        <MainHeader />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 mb-12">
-            <Link href="/about" className="feature-card cursor-pointer hover:scale-105 transition-transform">
-              <h2 className="text-2xl font-semibold text-blue-600 mb-2">About</h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Learn more about our project and approach
-              </p>
-            </Link>
-
-            <Link href="/blog" className="feature-card cursor-pointer hover:scale-105 transition-transform">
-              <h2 className="text-2xl font-semibold text-blue-600 mb-2">Blog</h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Read our latest articles and updates
-              </p>
-            </Link>
-
-            <Link href="/contact" className="feature-card cursor-pointer hover:scale-105 transition-transform">
-              <h2 className="text-2xl font-semibold text-blue-600 mb-2">Contact</h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Get in touch with us directly
-              </p>
-            </Link>
-
-            <div className="feature-card">
-              <h2 className="text-2xl font-semibold text-blue-600 mb-2">Tech Stack</h2>
-              <p className="text-gray-600 dark:text-gray-400">
-                Next.js • React • Tailwind CSS • JavaScript
-              </p>
-            </div>
+        {/* Trusted By Section */}
+        <div className="py-12">
+          <div className="flex items-center justify-center mb-8 max-w-4xl mx-auto">
+            <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent to-slate-400 dark:to-slate-600"></div>
+            <span className="mx-6 text-sm font-semibold tracking-[0.2em] text-slate-500 dark:text-slate-400 uppercase">
+              Trusted by Companies
+            </span>
+            <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent to-slate-400 dark:to-slate-600"></div>
           </div>
 
-          <div className="bg-blue-50 dark:bg-slate-800 rounded-lg p-6">
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-2">
-              🎨 Styling Features
-            </h3>
-            <ul className="text-left space-y-2 text-gray-700 dark:text-gray-300">
-              <li>✓ Tailwind CSS for utility-first styling</li>
-              <li>✓ Global CSS file with custom classes</li>
-              <li>✓ Dark mode support</li>
-              <li>✓ Responsive design across all pages</li>
-            </ul>
+          <div className="max-w-6xl mx-auto overflow-hidden opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+            <LogoLoop
+              logos={logos}
+              speed={50}
+              direction="left"
+              gap={60}
+              logoHeight={40}
+              pauseOnHover={false}
+            />
           </div>
 
 
           
         </div>
-        
-      </main>
-      {/* just and example component. Use it if you like it. */}
-      {/* <BookSlider />  */}
 
-      
-      
+        <ServicesComponent />
+      </main>
+      <BookSlider />
+
       <Footer />
     </div>
   );
