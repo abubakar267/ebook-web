@@ -19,17 +19,17 @@ const books = [
 
 const BookSlider = () => {
     return (
-        <div className="bg-[#f3f3f3] py-20 overflow-hidden">
+        <div className="bg-transparent py-20 overflow-visible">
             <Swiper
                 modules={[Autoplay]}
-                spaceBetween={30}
-                slidesPerView={5}
+                spaceBetween={0}
+                slidesPerView={6}
                 centeredSlides={true}
                 loop={true}
                 autoplay={{ delay: 4000 }}
                 breakpoints={{
                     640: { slidesPerView: 3 },
-                    1024: { slidesPerViesw: 5 },
+                    1024: { slidesPerView: 5 },
                 }}
                 className="book-swiper !overflow-visible"
             >
@@ -39,7 +39,7 @@ const BookSlider = () => {
                         <div className="relative group perspective-1000 w-48 h-64">
 
                             {/* Colored Background Card */}
-                            <div className={`aspect-[3/4] ${book.color} rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-112`} />
+                            <div className={`aspect-[3/4] bg-book-card rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-112 group-hover:-translate-y-4`} />
 
                             {/* Tilted Book Image */}
                             <div className="absolute inset-0 -top-3 -left-1 rotate-[-15deg] transition-transform duration-500 hover:rotate-0 hover:-translate-y-2">
@@ -51,12 +51,7 @@ const BookSlider = () => {
                             </div>
                         </div>
 
-                        {/* Author Badge - Moved outside and down */}
-                        <div className="mt-6 flex justify-center">
-                            <span className="bg-[#ccff66] text-black px-4 py-1.5 rounded-full font-semibold text-xs shadow-md whitespace-nowrap">
-                                {book.author}
-                            </span>
-                        </div>
+
                     </SwiperSlide>
                 ))}
             </Swiper>
