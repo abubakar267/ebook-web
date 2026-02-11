@@ -1,5 +1,5 @@
 "use client";
-
+import BlurText from "../animations//BlurText";
 const MainHeader = () => {
     return (
         <section className="container mx-auto px-4 pb-8 pt-2">
@@ -17,13 +17,24 @@ const MainHeader = () => {
                             </span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight">
-                            Building Future-Ready <br className="hidden md:block" />
-                            <span className="relative inline-block">
-                                Digital Experiences
-                                {/* <svg className="absolute w-full h-2 -bottom-1 left-0 text-slate-900 opacity-20" viewBox="0 0 200 9" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M2.00025 6.48972C49.9576 4.60623 98.4046 2.84272 146.368 1.48721C164.27 0.981881 182.162 0.582823 200.046 0.285645C200.758 0.27419 201.277 0.9029 201 1.60333C200.776 2.1691 200.323 2.5832 199.761 2.76632C154.551 17.5186 102.738 8.85196 55.4851 8.85196C37.3888 8.85196 19.3308 8.53036 1.30053 7.89204C0.493922 7.86377 -0.116669 7.02706 0.0526744 6.22596C0.198308 5.53587 1.09631 4.98126 1.8364 5.0877L2.00025 6.48972Z"></path></svg> */}
-                            </span>
-                        </h1>
+                        <div className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6 tracking-tight text-center">
+                            <BlurText
+                                text="Building Future-Ready"
+                                delay={200}
+                                animateBy="words"
+                                direction="top"
+                                className=""
+                            />
+                            <br className="hidden md:block" />
+                            <BlurText
+                                text="Digital Experiences"
+                                delay={200}
+                                animateBy="words"
+                                direction="top"
+                                className=""
+                            />
+                        </div>
+ 
 
                         <p className="text-base md:text-lg font-medium text-slate-800 mb-6 max-w-xl mx-auto leading-relaxed opacity-90">
                             We transform complex challenges into elegant, high-performance software solutions. Elevate your business with our cutting-edge development expertise.

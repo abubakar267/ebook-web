@@ -1,5 +1,12 @@
 import React from 'react';
 import { Mail, ArrowUp } from 'lucide-react';
+import Image from 'next/image';
+import { Permanent_Marker } from 'next/font/google';
+
+const permanentMarker = Permanent_Marker({ 
+  weight: '400',
+  subsets: ['latin'] 
+});
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -7,10 +14,21 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-white pt-16 font-sans">
+    <footer className="bg-[#1a1a1a] text-white pt-16 font-sans relative overflow-hidden">
+      {/* Footer Image on extreme left */}
+      <div className="absolute -left-8 sm:-left-10 md:-left-14 lg:-left-18 top-1 sm:top-2 md:top-12 lg:top-20 w-24 sm:w-28 md:w-40 lg:w-48 xl:w-56 h-auto">
+        <Image 
+          src="/extra/footer-img.png" 
+          alt="Footer decoration" 
+          width={200} 
+          height={200}
+          className="w-full h-auto object-contain"
+        />
+      </div>
+      
       <div className="max-w-7xl mx-auto px-6">
         {/* Main Heading */}
-        <h2 className="text-[#a3e635] text-5xl md:text-7xl font-black mb-12 italic tracking-tighter">
+        <h2 className={`${permanentMarker.className} text-[#a3e635] text-5xl md:text-7xl mb-12 tracking-tighter`}>
           Let's Start Now!
         </h2>
 
@@ -70,21 +88,15 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Large Logo Section */}
-      <div className="relative mt-10">
-        <div className="bg-[#ccff66] rounded-t-[100px] py-12 flex justify-center items-center px-6">
-          <div className="flex items-center gap-4 text-black">
-            {/* Simple SVG Logo implementation */}
-            <div className="w-12 h-12 border-2 border-black rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-black rounded-full"></div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Goodspeed Publishing
-            </h1>
-          </div>
-        </div>
-
-
+      {/* Footer Image 2 on extreme bottom right */}
+      <div className="absolute -right-8 sm:-right-10 md:-right-14 lg:-right-16 -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-16 w-24 sm:w-28 md:w-40 lg:w-48 xl:w-56 h-auto">
+        <Image 
+          src="/extra/footer-img2.png" 
+          alt="Footer decoration" 
+          width={200} 
+          height={200}
+          className="w-full h-auto object-contain"
+        />
       </div>
     </footer>
   );
