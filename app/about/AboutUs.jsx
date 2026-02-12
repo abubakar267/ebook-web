@@ -7,7 +7,10 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen bg-slate-50">
         <Navbar/>
+
+        <div className='mt-10 md:mt-0'>
         <AboutUsHeader />
+        </div>
         <div className="mt-12 md:mt-16">
           <CardSection/>
         </div>
