@@ -80,10 +80,10 @@ const MarketingCard = () => {
                                             </div>
                                             {/* Floating Reactions */}
                                             <div className="absolute bottom-4 right-4 flex flex-col gap-2">
-                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-red-500 animate-bounce">
+                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-[#E37434] animate-bounce">
                                                     <Heart size={14} fill="currentColor" />
                                                 </div>
-                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-blue-500 animate-pulse delay-75">
+                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-[#4B9DA9] animate-pulse delay-75">
                                                     <Star size={14} fill="currentColor" />
                                                 </div>
                                             </div>
@@ -120,9 +120,9 @@ const MarketingCard = () => {
                                 Leveraging third-party voices to build credibility and buzz.
                             </p>
                             <div className="mt-4 flex gap-2">
-                                <div className="h-8 w-8 rounded-full bg-yellow-400"></div>
-                                <div className="h-8 w-8 rounded-full bg-pink-400"></div>
-                                <div className="h-8 w-8 rounded-full bg-blue-400"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#91C6BC]"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#E37434]"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#4B9DA9]"></div>
                             </div>
                         </div>
 

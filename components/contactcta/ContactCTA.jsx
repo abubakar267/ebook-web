@@ -5,22 +5,22 @@ const ContactCTA = () => {
     return (
         <section className="py-24 px-4 bg-slate-50">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-[#91C6BC] pt-12 md:pt-20 px-8 md:px-20 pb-12 md:pb-20 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl rounded-[3rem]">
+                <div className="bg-[#4B9DA9] pt-12 md:pt-20 px-8 md:px-20 pb-12 md:pb-20 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl rounded-[3rem]">
 
                     {/* Content */}
                     <div className="relative z-10 max-w-xl">
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-bold mb-8 shadow-md">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white text-sm font-bold mb-8 shadow-md border border-white/20">
                             <Sparkles size={16} className="text-[#E37434]" />
                             <span>Let's build something amazing</span>
                         </div>
-                        <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
+                        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tight">
                             Ready to Bring Your Ideas to Life?
                         </h2>
-                        <p className="text-slate-800 text-lg md:text-xl mb-10 leading-relaxed font-medium max-w-lg">
+                        <p className="text-white/90 text-lg md:text-xl mb-10 leading-relaxed font-medium max-w-lg">
                             Whether you have a fully drafted manuscript or just a spark of an idea, our team is here to guide you every step of the way.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <button className="px-10 py-5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-2xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 shadow-xl text-lg group">
+                            <button className="px-10 py-5 bg-white hover:bg-slate-100 text-[#4B9DA9] font-bold rounded-2xl transition-all transform hover:scale-105 flex items-center justify-center gap-3 shadow-xl text-lg group">
                                 Contact Us Now <ArrowRight size={22} className="group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>

@@ -6,11 +6,11 @@ import 'swiper/css/navigation';
 
 const CardGraphic1 = () => (
     <div className="h-48 w-full relative flex items-end justify-center gap-1 overflow-hidden" aria-hidden="true">
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#4B9DA9]/20 to-transparent z-10" />
         {[...Array(20)].map((_, i) => (
             <div
                 key={i}
-                className={`w-4 rounded-t-sm transition-all duration-500 hover:translate-y-2 ${['bg-blue-500', 'bg-yellow-400', 'bg-emerald-400', 'bg-orange-400', 'bg-white', 'bg-purple-400'][i % 6]
+                className={`w-4 rounded-t-sm transition-all duration-500 hover:translate-y-2 ${['bg-[#4B9DA9]', 'bg-[#3A8D99]', 'bg-[#E37434]', 'bg-[#91C6BC]', 'bg-white', 'bg-[#3A8D99]'][i % 6]
                     }`}
                 style={{ height: `${Math.max(40, Math.random() * 100)}%` }}
             />
@@ -27,13 +27,13 @@ const CardGraphic2 = () => (
 
             {/* Floating Badges */}
             <div className="absolute top-4 left-4 bg-white shadow-lg p-2 rounded-lg rotate-[-6deg] animate-pulse">
-                <span className="font-bold text-slate-900 text-xs">WIX</span>
+                <span className="font-bold text-[#4B9DA9] text-xs">WIX</span>
             </div>
             <div className="absolute bottom-12 right-8 bg-white shadow-lg p-2 rounded-lg rotate-[12deg] animate-bounce">
-                <ShoppingBag className="w-5 h-5 text-pink-500" />
+                <ShoppingBag className="w-5 h-5 text-[#E37434]" />
             </div>
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white shadow-xl p-4 rounded-xl z-10 flex flex-col items-center">
-                <Globe className="w-8 h-8 text-blue-600 mb-1" />
+                <Globe className="w-8 h-8 text-[#3A8D99] mb-1" />
                 <span className="font-bold text-slate-900 text-sm">Direct</span>
             </div>
             <div className="absolute top-8 right-12 bg-white shadow-lg p-2 rounded-lg rotate-[3deg]">
@@ -58,17 +58,17 @@ const CardGraphic3 = () => (
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
                 <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
             </div>
-            <div className="p-3 font-mono text-[10px] text-green-400 leading-relaxed opacity-90">
+            <div className="p-3 font-mono text-[10px] text-[#E37434] leading-relaxed opacity-90">
                 <div className="flex gap-2">
-                    <span className="text-purple-400">const</span>
-                    <span className="text-blue-300">book</span> = <span className="text-yellow-300">new Book()</span>;
+                    <span className="text-[#4B9DA9]">const</span>
+                    <span className="text-[#3A8D99]">book</span> = <span className="text-[#91C6BC]">new Book()</span>;
                 </div>
-                <div>book.<span className="text-blue-300">print()</span>;</div>
+                <div>book.<span className="text-[#3A8D99]">print()</span>;</div>
                 <div className="text-slate-500">// API Request</div>
             </div>
         </div>
         <div className="absolute top-8 right-8 bg-white p-2 rounded-lg shadow-lg rotate-12">
-            <Code className="w-6 h-6 text-blue-600" />
+            <Code className="w-6 h-6 text-[#4B9DA9]" />
         </div>
     </div>
 );
@@ -114,27 +114,27 @@ const CardGraphic5 = () => (
 );
 
 const CardGraphic6 = () => (
-    <div className="h-48 w-full relative flex items-center justify-center p-4 bg-indigo-50 rounded-t-xl overflow-hidden" aria-hidden="true">
+    <div className="h-48 w-full relative flex items-center justify-center p-4 bg-purple-50 rounded-t-xl overflow-hidden" aria-hidden="true">
         {/* Social Media Post Mockup */}
-        <div className="bg-white w-40 h-32 rounded-lg shadow-md border border-indigo-100 p-3 flex flex-col gap-2 rotate-[-3deg] absolute left-10 top-6">
+        <div className="bg-white w-40 h-32 rounded-lg shadow-md border border-purple-100 p-3 flex flex-col gap-2 rotate-[-3deg] absolute left-10 top-6">
             <div className="flex gap-2 items-center">
-                <div className="w-6 h-6 rounded-full bg-indigo-200"></div>
+                <div className="w-6 h-6 rounded-full bg-[#3A8D99]"></div>
                 <div className="w-20 h-2 bg-slate-100 rounded"></div>
             </div>
-            <div className="w-full h-12 bg-slate-50 rounded bg-indigo-50/50"></div>
+            <div className="w-full h-12 bg-slate-50 rounded bg-[#3A8D99]/10"></div>
             <div className="flex justify-between mt-auto">
-                <div className="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center border border-red-100"><Heart className="w-3 h-3 text-red-500 fill-red-500" /></div>
+                <div className="w-6 h-6 rounded-full bg-pink-50 flex items-center justify-center border border-pink-100"><Heart className="w-3 h-3 text-[#E37434] fill-[#E37434]" /></div>
                 <div className="w-12 h-2 bg-slate-100 rounded"></div>
             </div>
         </div>
 
         {/* Floating Megaphone */}
-        <div className="absolute bottom-6 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform animate-bounce">
+        <div className="absolute bottom-6 right-8 bg-[#4B9DA9] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform animate-bounce">
             <Megaphone className="w-6 h-6" />
         </div>
 
         {/* Floating Tag */}
-        <div className="absolute top-4 right-6 bg-yellow-400 text-yellow-900 px-2.5 py-1 rounded-md shadow-sm rotate-[12deg] text-[10px] font-bold border border-yellow-500">
+        <div className="absolute top-4 right-6 bg-[#91C6BC] text-slate-900 px-2.5 py-1 rounded-md shadow-sm rotate-[12deg] text-[10px] font-bold border border-[#E37434]">
             PROMO
         </div>
     </div>
@@ -157,8 +157,8 @@ const FeatureCards = () => {
             title: "Sell Your Books Direct",
             description: "Ditch the overhead, sell books direct-to-consumer, and unlock true on-demand scalability. Print single copies or bulk shipments exactly when you need them.",
             buttonText: "Sell Your Books",
-            buttonColor: "bg-[#91C6BC] hover:bg-[#81B5AB]",
-            graphicBg: "bg-slate-100",
+            buttonColor: "bg-[#3A8D99] hover:bg-[#2F7A85]",
+            graphicBg: "bg-[#3A8D99]/10",
             Graphic: CardGraphic2
         },
         {
@@ -166,8 +166,8 @@ const FeatureCards = () => {
             title: "Customize Your Book Printing With API",
             description: "Level up by plugging in our Print API and enabling automated print and global fulfillment for books, magazines, workbooks, and more.",
             buttonText: "Explore the API",
-            buttonColor: "bg-[#E37434] hover:bg-[#D26323]",
-            graphicBg: "bg-[#91C6BC]/10",
+            buttonColor: "bg-[#E37434] hover:bg-[#C9632C]",
+            graphicBg: "bg-[#E37434]/10",
             Graphic: CardGraphic3
         },
         {
@@ -175,8 +175,8 @@ const FeatureCards = () => {
             title: "Analytics & Global Insights",
             description: "Track your success with real-time data on sales, revenue, and reader demographics across our global distribution network.",
             buttonText: "View Analytics",
-            buttonColor: "bg-slate-800 hover:bg-slate-700",
-            graphicBg: "bg-slate-50",
+            buttonColor: "bg-[#4B9DA9] hover:bg-[#3A8D99]",
+            graphicBg: "bg-[#4B9DA9]/10",
             Graphic: CardGraphic4
         },
         {
@@ -184,8 +184,8 @@ const FeatureCards = () => {
             title: "Expert Design Services",
             description: "Need help with your cover design or interior formatting? Collaborate with our vetted design professionals to make your book stand out.",
             buttonText: "Hire a Pro",
-            buttonColor: "bg-pink-600 hover:bg-pink-500",
-            graphicBg: "bg-pink-50",
+            buttonColor: "bg-[#3A8D99] hover:bg-[#2F7A85]",
+            graphicBg: "bg-[#3A8D99]/10",
             Graphic: CardGraphic5
         },
         {
@@ -193,17 +193,35 @@ const FeatureCards = () => {
             title: "Built-in Marketing Tools",
             description: "Promote your book with ease. Use our suite of social media assets, discount codes, and pre-order campaigns to drive sales.",
             buttonText: "Start Promoting",
-            buttonColor: "bg-indigo-600 hover:bg-indigo-500",
-            graphicBg: "bg-indigo-50",
+            buttonColor: "bg-[#E37434] hover:bg-[#C9632C]",
+            graphicBg: "bg-[#E37434]/10",
             Graphic: CardGraphic6
         }
     ];
 
     return (
-        <section className="w-full pb-12 pt-0 pr-8 md:pr-16 pl-0 bg-slate-50 -mt-12">
+        <section className="w-full pb-12 pt-16 pr-8 md:pr-16 pl-0 bg-slate-50 -mt-32 overflow-visible">
+
+            {/* Section Header - Static with Highlights */}
+            <div className="max-w-[95rem] mx-auto px-4 md:px-8 mb-16 relative z-20 text-center">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter whitespace-nowrap">
+                    Explore the <span className="text-[#4B9DA9]">Services</span> we offer to help you <span className="text-[#E37434]">Succeed</span>
+                </h2>
+            </div>
+
             <div className="bg-[#F6F3C2] rounded-r-[50px] rounded-l-none py-8 pr-8 pl-0 md:py-16 md:pr-0 md:pl-0 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)] relative overflow-hidden">
                 {/* Decorative Shape resembling header style */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-white opacity-40 blur-3xl pointer-events-none"></div>
+
+                {/* New Decorative Elements */}
+                <div className="absolute bottom-0 left-10 w-64 h-64 rounded-full border-[20px] border-[#91C6BC] opacity-20 pointer-events-none -mb-32"></div>
+                <div className="absolute top-20 left-1/4 w-12 h-12 bg-[#3A8D99] rounded-full opacity-10 pointer-events-none animate-pulse"></div>
+                <svg className="absolute top-10 right-1/3 w-24 h-24 text-slate-400 opacity-10 pointer-events-none rotate-12" viewBox="0 0 100 100" fill="currentColor">
+                    <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="2" />
+                    </pattern>
+                    <rect width="100" height="100" fill="url(#dots)" />
+                </svg>
 
                 <div className="max-w-[90rem] mx-auto relative z-10">
 
@@ -223,6 +241,7 @@ const FeatureCards = () => {
                                 modules={[Navigation]}
                                 spaceBetween={32}
                                 slidesPerView={1}
+                                allowTouchMove={false}
                                 navigation={{
                                     prevEl: '.swiper-prev-btn',
                                     nextEl: null,
