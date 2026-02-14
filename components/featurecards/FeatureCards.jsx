@@ -72,8 +72,14 @@ const CardGraphic3 = () => (
 
 const FeatureCards = () => {
     return (
-        <section className="py-24 relative z-10 -mt-[1px]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="pt-32 pb-24 relative z-10 -mt-[1px] bg-[#F6F3C2]">
+            {/* Top Squiggly Divider */}
+            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none z-10 -translate-y-[99%]">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-[calc(100%+1.3px)] h-[60px] md:h-[100px] text-[#F6F3C2] fill-current">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="shape-fill"></path>
+                </svg>
+            </div>
+            <div className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* <div className="text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Publishing Solutions</h2>
@@ -83,48 +89,48 @@ const FeatureCards = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
                     {/* Card 1 */}
-                    <div className="bg-slate-900 text-slate-100 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-800 group">
-                        <div className="bg-slate-800/50 pt-8 px-4 pb-0 overflow-hidden relative group-hover:bg-slate-800/80 transition-colors">
+                    <div className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-200 group">
+                        <div className="bg-[#4B9DA9]/10 pt-8 px-4 pb-0 overflow-hidden relative transition-colors">
                             <CardGraphic1 />
                         </div>
 
                         <div className="p-8 flex-1 flex flex-col">
                             <h3 className="text-2xl font-bold mb-4">Fast Book Publishing & Printing</h3>
-                            <p className="text-slate-400 mb-8 flex-1 leading-relaxed">
+                            <p className="text-slate-600 mb-8 flex-1 leading-relaxed">
                                 In under a day, publish your book and have it available for sale on Lulu Bookstore. Use our free templates to generate a PDF to have your book printed.
                             </p>
-                            <button className="w-full py-3 px-6 rounded-lg bg-[var(--color-brand-green)] hover:bg-[#a3d93d] text-slate-900 font-bold transition-colors flex items-center justify-center gap-2 group-hover:gap-3">
+                            <button className="w-full py-3 px-6 rounded-lg bg-[#4B9DA9] hover:bg-[#3A8D99] text-white font-bold transition-colors flex items-center justify-center gap-2 group-hover:gap-3">
                                 Book Creation Options <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
                     </div>
 
-                    {/* Card 2 (Brand Green) */}
-                    <div className="bg-lulu text-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-300 group ring-4 ring-transparent hover:ring-brand-green/20">
+                    {/* Card 2 (White) */}
+                    <div className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-200 group ring-4 ring-transparent hover:ring-slate-200/50">
                         {/* Using bg-lulu utility if defined or inline style */}
                         {/* Wait, bg-lulu in globals.css sets background color AND image pattern. 
                  If we want the pure brand color, we should use bg-[#C1F25D] text-slate-900.
                  But the requested "brand color SCHEME" usually implies the primary color.
                  Let's stick to the color code or var.
              */}
-                        <div className="bg-black/5 pt-8 px-4 pb-0 overflow-hidden relative">
+                        <div className="bg-slate-100 pt-8 px-4 pb-0 overflow-hidden relative">
                             <CardGraphic2 />
                         </div>
 
                         <div className="p-8 flex-1 flex flex-col relative z-10">
                             <h3 className="text-2xl font-bold mb-4">Sell Your Books Direct</h3>
-                            <p className="text-slate-800/80 mb-8 flex-1 leading-relaxed font-medium">
+                            <p className="text-slate-600 mb-8 flex-1 leading-relaxed font-medium">
                                 Ditch the overhead, sell books direct-to-consumer, and unlock true on-demand scalability. Print single copies or bulk shipments exactly when you need them.
                             </p>
-                            <button className="w-full py-3 px-6 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold transition-colors flex items-center justify-center gap-2 group-hover:gap-3 shadow-lg">
+                            <button className="w-full py-3 px-6 rounded-lg bg-[#91C6BC] hover:bg-[#81B5AB] text-white font-semibold transition-colors flex items-center justify-center gap-2 group-hover:gap-3 shadow-lg">
                                 Sell Your Books <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
                     </div>
 
-                    {/* Card 3 */}
+                    {/* Card 3 (White) */}
                     <div className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-200 group">
-                        <div className="bg-slate-200 pt-8 px-4 pb-0 overflow-hidden relative">
+                        <div className="bg-[#91C6BC]/10 pt-8 px-4 pb-0 overflow-hidden relative">
                             <CardGraphic3 />
                         </div>
 
@@ -133,7 +139,7 @@ const FeatureCards = () => {
                             <p className="text-slate-600 mb-8 flex-1 leading-relaxed">
                                 Level up by plugging in our Print API and enabling automated print and global fulfillment for books, magazines, workbooks, and more.
                             </p>
-                            <button className="w-full py-3 px-6 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-semibold transition-all flex items-center justify-center gap-2 group-hover:gap-3">
+                            <button className="w-full py-3 px-6 rounded-lg bg-[#E37434] hover:bg-[#D26323] text-white font-semibold transition-all flex items-center justify-center gap-2 group-hover:gap-3">
                                 Explore the API <ArrowRight className="w-4 h-4" />
                             </button>
                         </div>
@@ -141,6 +147,8 @@ const FeatureCards = () => {
 
                 </div>
             </div>
+
+
         </section>
     );
 };

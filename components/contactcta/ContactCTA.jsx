@@ -5,12 +5,12 @@ const ContactCTA = () => {
     return (
         <section className="py-24 px-4 bg-slate-50">
             <div className="max-w-7xl mx-auto">
-                <div className="bg-[var(--color-brand-green)] pt-12 md:pt-20 px-8 md:px-20 pb-12 md:pb-20 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl rounded-[3rem]">
+                <div className="bg-[#91C6BC] pt-12 md:pt-20 px-8 md:px-20 pb-12 md:pb-20 relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-12 shadow-2xl rounded-[3rem]">
 
                     {/* Content */}
                     <div className="relative z-10 max-w-xl">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-bold mb-8 shadow-md">
-                            <Sparkles size={16} className="text-[#C1F25D]" />
+                            <Sparkles size={16} className="text-[#E37434]" />
                             <span>Let's build something amazing</span>
                         </div>
                         <h2 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight tracking-tight">
@@ -39,7 +39,7 @@ const ContactCTA = () => {
                                 <div className="h-4 w-20 bg-slate-200 rounded-full"></div>
 
                                 {/* Notification Badge */}
-                                <div className="absolute -top-4 -right-4 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center border-4 border-white text-white font-bold shadow-lg transform rotate-12">
+                                <div className="absolute -top-4 -right-4 w-12 h-12 bg-[#E37434] rounded-full flex items-center justify-center border-4 border-white text-white font-bold shadow-lg transform rotate-12">
                                     1
                                 </div>
                             </div>
