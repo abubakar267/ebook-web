@@ -77,7 +77,7 @@ const AboutUsHeader = () => {
         <main className="relative z-10 flex flex-col items-start text-left mt-12 px-6 md:px-12 pt-12 md:pt-20 pb-20 md:pb-40">
           <BlurText
             text="About Us"
-            className="text-4xl sm:text-5xl font-bold mb-4 md:mb-6 leading-tight"
+            className="text-4xl sm:text-5xl -mt-2 sm:-mt-0 font-bold mb-4 md:mb-6 leading-tight"
             delay={150}
             animateBy="words"
             direction="top"
@@ -90,7 +90,7 @@ const AboutUsHeader = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-start gap-3 md:gap-4">
-            <button className="bg-white text-[#FF5733] px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-lg transition-all">
+            <button className="bg-white text-purple-800/40 border border-purple-800/40 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-lg transition-all">
               Get Started Free
             </button>
             {/* <button className="flex items-center gap-2 border-2 border-white/30 bg-white/10 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white/20 transition-all">
