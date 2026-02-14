@@ -3,16 +3,16 @@ import BlurText from "../animations//BlurText";
 import BookSlider from "../sliders/BookSlider";
 const MainHeader = () => {
     return (
-        <section className="w-full pl-4 pr-0 pb-8 pt-15">
+        <section className="w-full sm:pl-4 pr-0 pb-8 pt-4 sm:pt-10">
             <div className="w-full">
                 {/* Hero Card: Software House Style - Adjusted for viewport fit */}
-                <div className="px-0 py-6 md:pl-8 md:py-8 md:pr-0 flex flex-col items-start text-left relative overflow-hidden justify-center w-full">
+                <div className="px-0 my-6 md:pl-8 md:py-8 md:pr-0 flex flex-col items-start text-left relative overflow-hidden justify-center w-full">
 
                     {/* Background Abstract Shapes */}
 
 
                     <div className="z-10 w-full flex justify-start pl-0 md:pl-0">
-                        <div className="bg-[#7AB2B2] p-12 md:p-20 rounded-l-[50px] rounded-r-none shadow-lg w-full min-h-[650px] flex flex-col justify-center text-left relative overflow-hidden">
+                        <div className="bg-[#7AB2B2] p-6 md:p-20 rounded-[50px]  sm:rounded-r-none shadow-lg w-full min-h-[520px] sm:min-h-[650px] flex flex-col justify-center text-left relative overflow-hidden">
 
                             {/* Decorative Background Shapes */}
                             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-white opacity-40 blur-3xl pointer-events-none"></div>
@@ -59,11 +59,13 @@ const MainHeader = () => {
                             {/* Fade Overlay for Slider Effect */}
                             <div className="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-[#7AB2B2] via-[#7AB2B2]/90 to-transparent z-20 pointer-events-none"></div>
 
+                            {/* Left Side Fade Overlay */}
+                            <div className="absolute left-80 top-0 bottom-0 w-[900px] bg-gradient-to-r from-[#7AB2B2] via-[#7AB2B2] to-transparent z-20 pointer-events-none"></div>
 
-                            s
-                            <div className="relative z-30 max-w-2xl">
-                                {/* Blur Backdrop for Text legibility over slider */}
-                                <div className="absolute inset-0 -m-10 bg-[#7AB2B2]/80 backdrop-blur-xl -z-10 rounded-3xl blur-xl"></div>
+                            
+                            <div className="relative z-30 max-w-3xl">
+                                {/* Backdrop for Text legibility */}
+                                {/* <div className="absolute inset-0 -m-10 bg-[#7AB2B2]/40 -z-10 rounded-3xl"></div> */}
 
                                 <div className="inline-block mb-4">
                                     <span className="bg-[#4B9DA9]/10 text-[#4B9DA9] border border-[#4B9DA9]/20 px-3 py-1.5 rounded-full font-bold text-xs tracking-wide uppercase">
@@ -71,7 +73,7 @@ const MainHeader = () => {
                                     </span>
                                 </div>
 
-                                <div className="text-3xl md:text-5xl lg:text-6xl font-black text-[#FFFFFF] leading-[1.1] mb-6 tracking-tight text-left">
+                                <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] leading-[1.1] mb-6 tracking-tight text-left">
                                     <BlurText
                                         text="Building Future-Ready"
                                         delay={200}
@@ -79,7 +81,7 @@ const MainHeader = () => {
                                         direction="top"
                                         className=""
                                     />
-                                    <br className="hidden md:block" />
+                                    
                                     <BlurText
                                         text="Digital Experiences"
                                         delay={200}
@@ -95,8 +97,8 @@ const MainHeader = () => {
                                     We transform complex challenges into elegant, high-performance software solutions. Elevate your business with our cutting-edge development expertise.
                                 </p>
 
-                                <div className="flex flex-col sm:flex-row items-center justify-start gap-6">
-                                    <button className="bg-[#4B9DA9] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#3A8D99] transition-all transform hover:scale-105 hover:shadow-xl flex items-center group">
+                                <div className="flex flex-col sm:flex-row items-left justify-start gap-6">
+                                    <button className="w-[210px] bg-[#4B9DA9] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#3A8D99] transition-all transform hover:scale-105 hover:shadow-xl flex items-center group">
                                         Start Your Project
                                         <span className="ml-2 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white text-[#4B9DA9] transition-colors">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:-rotate-45 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
@@ -105,7 +107,7 @@ const MainHeader = () => {
                                         </span>
                                     </button>
 
-                                    <button className="px-5 py-3 rounded-full font-bold text-sm text-[#E37434] border-2 border-[#E37434]/20 hover:bg-[#E37434]/5 transition-colors flex items-center">
+                                    <button className="w-[210px] px-5 py-3 rounded-full font-bold text-sm text-[#E37434] border-2 border-[#E37434]/20 hover:bg-[#E37434]/5 transition-colors flex items-center">
                                         <span className="mr-2 text-lg">⚡</span>
                                         View Our Work
                                     </button>

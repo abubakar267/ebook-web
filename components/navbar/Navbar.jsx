@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -17,12 +18,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Products', hasDropdown: true },
-    { name: 'Pricing', hasDropdown: false },
-    { name: 'Create', hasDropdown: false },
-    { name: 'Sell', hasDropdown: true },
-    { name: 'Resources', hasDropdown: true },
-    { name: 'Bookstore', hasDropdown: false },
+    { name: 'Products', href: '/products', hasDropdown: true },
+    { name: 'Pricing', href: '/pricing', hasDropdown: false },
+    { name: 'About', href: '/about', hasDropdown: false },
+    { name: 'Contact', href: '/contact-us', hasDropdown: false },
+    { name: 'Resources', href: '/resources', hasDropdown: true },
+    { name: 'Bookstore', href: '/bookstore', hasDropdown: false },
   ];
 
   return (
@@ -31,16 +32,17 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 md:h-16 relative">
 
           {/* Logo */}
-          <div className="flex items-center cursor-pointer flex-shrink-0 z-20">
+          <Link href="/" className="flex items-center cursor-pointer flex-shrink-0 z-20">
             {/* <img src={logoAnimated ? "/logo3.gif" : "/logo.png"} alt="Logo" className="w-70 h-20 object-contain" /> */}
             <img src="/logo.png" alt="Logo" className="w-70 h-20 object-contain" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation - Absolute Centered */}
           <div className="hidden md:flex items-center gap-6 lg:gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.name}
+                href={link.href}
                 onClick={() => setActive(link.name)}
                 className={`group flex items-center gap-1.5 text-[15px] font-bold tracking-tight transition-colors duration-200 outline-none
                   ${active === link.name ? 'text-[#91C6BC]' : 'text-slate-600 hover:text-[#91C6BC]'}
@@ -50,7 +52,7 @@ const Navbar = () => {
                 {link.hasDropdown && (
                   <ChevronDown size={14} className="stroke-[3px] mt-0.5 text-slate-400 group-hover:text-[#91C6BC] group-hover:rotate-180 transition-all duration-200" />
                 )}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -69,8 +71,9 @@ const Navbar = () => {
         <div className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-gray-100 md:hidden z-50">
           <div className="flex flex-col p-4 space-y-1">
             {navLinks.map((link) => (
-              <button
+              <Link
                 key={link.name}
+                href={link.href}
                 onClick={() => {
                   setActive(link.name);
                   setIsMenuOpen(false);
@@ -79,7 +82,7 @@ const Navbar = () => {
               >
                 {link.name}
                 {link.hasDropdown && <ChevronDown size={16} />}
-              </button>
+              </Link>
             ))}
           </div>
         </div>

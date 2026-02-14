@@ -8,13 +8,13 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 
 const books = [
-    { id: 1, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book.jpg' },
-    { id: 2, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book.jpg' },
-    { id: 3, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book.jpg' },
+    { id: 1, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book-about1.png' },
+    { id: 2, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book-about2.jpg' },
+    { id: 3, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book-about3.jpg' },
     // Duplicates for seamless looping (Swiper needs slidesPerView * 2)
-    { id: 4, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book.jpg' },
-    { id: 5, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book.jpg' },
-    { id: 6, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book.jpg' },
+    { id: 4, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book-about1.png' },
+    { id: 5, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book-about2.jpg' },
+    { id: 6, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book-about3.jpg' },
 ];
 
 const BookSlider = ({ className = "" }) => {

@@ -34,8 +34,8 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1">
         {/* Blue Hero Section Wrapper */}
-        <div className="bg-slate-50 relative pb-24 pt-2">
-          <div className="pl-4 pr-0">
+        <div className="bg-slate-50 relative pb-24">
+          <div className="mx-4 sm:mr-0">
             <MainHeader />
           </div>
 

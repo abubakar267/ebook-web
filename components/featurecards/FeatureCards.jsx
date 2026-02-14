@@ -203,11 +203,11 @@ const FeatureCards = () => {
         <section className="w-full pb-12 pt-16 pr-8 md:pr-16 pl-0 bg-slate-50 -mt-32 overflow-visible">
 
             {/* Section Header - Static with Highlights */}
-            <div className="max-w-[95rem] mx-auto px-4 md:px-8 mb-16 relative z-20 text-center">
+            {/* <div className="max-w-[95rem] mx-auto px-4 md:px-8 mb-16 relative z-20 text-center">
                 <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter whitespace-nowrap">
                     Explore the <span className="text-[#4B9DA9]">Services</span> we offer to help you <span className="text-[#E37434]">Succeed</span>
                 </h2>
-            </div>
+            </div> */}
 
             <div className="bg-[#F6F3C2] rounded-r-[50px] rounded-l-none py-8 pr-8 pl-0 md:py-16 md:pr-0 md:pl-0 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)] relative overflow-hidden">
                 {/* Decorative Shape resembling header style */}
