@@ -1,11 +1,20 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [logoAnimated, setLogoAnimated] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLogoAnimated(false);
+    }, 2000); // Adjust timing based on your GIF duration
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const navLinks = [
     { name: 'Products', hasDropdown: true },
@@ -22,14 +31,9 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14 md:h-16 relative">
 
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer flex-shrink-0 z-20">
-            <div className="relative w-8 h-8 flex items-center justify-center">
-              <div className="w-6 h-6 border-2 border-[#4B9DA9] rounded-full"></div>
-              <div className="absolute top-1 right-1 w-2 h-2 bg-[#4B9DA9] rounded-full"></div>
-            </div>
-            <span className="text-xl md:text-2xl font-black tracking-tight text-slate-900">
-              Goodspeed Tech
-            </span>
+          <div className="flex items-center cursor-pointer flex-shrink-0 z-20">
+            {/* <img src={logoAnimated ? "/logo3.gif" : "/logo.png"} alt="Logo" className="w-70 h-20 object-contain" /> */}
+            <img src="/logo.png" alt="Logo" className="w-70 h-20 object-contain" />
           </div>
 
           {/* Desktop Navigation - Absolute Centered */}
@@ -39,12 +43,12 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => setActive(link.name)}
                 className={`group flex items-center gap-1.5 text-[15px] font-bold tracking-tight transition-colors duration-200 outline-none
-                  ${active === link.name ? 'text-[#4B9DA9]' : 'text-slate-600 hover:text-[#4B9DA9]'}
+                  ${active === link.name ? 'text-[#91C6BC]' : 'text-slate-600 hover:text-[#91C6BC]'}
                 `}
               >
                 {link.name}
                 {link.hasDropdown && (
-                  <ChevronDown size={14} className="stroke-[3px] mt-0.5 text-slate-400 group-hover:text-slate-900 group-hover:rotate-180 transition-all duration-200" />
+                  <ChevronDown size={14} className="stroke-[3px] mt-0.5 text-slate-400 group-hover:text-[#91C6BC] group-hover:rotate-180 transition-all duration-200" />
                 )}
               </button>
             ))}
@@ -71,7 +75,7 @@ const Navbar = () => {
                   setActive(link.name);
                   setIsMenuOpen(false);
                 }}
-                className="flex items-center justify-between w-full p-4 text-left text-base font-bold text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full p-4 text-left text-base font-bold text-slate-700 hover:bg-slate-50 hover:text-[#91C6BC] rounded-lg transition-colors"
               >
                 {link.name}
                 {link.hasDropdown && <ChevronDown size={16} />}
