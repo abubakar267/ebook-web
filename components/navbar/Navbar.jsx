@@ -28,7 +28,7 @@ const Navbar = () => {
               <div className="absolute top-1 right-1 w-2 h-2 bg-slate-900 rounded-full"></div>
             </div>
             <span className="text-xl md:text-2xl font-black tracking-tight text-slate-900">
-              Goodspeed Tech
+              EverCrest Publishing
             </span>
           </div>
 
@@ -39,12 +39,12 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => setActive(link.name)}
                 className={`group flex items-center gap-1.5 text-[15px] font-bold tracking-tight transition-colors duration-200 outline-none
-                  ${active === link.name ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}
+                  ${active === link.name ? 'text-[#91C6BC]' : 'text-slate-600 hover:text-[#91C6BC]'}
                 `}
               >
                 {link.name}
                 {link.hasDropdown && (
-                  <ChevronDown size={14} className="stroke-[3px] mt-0.5 text-slate-400 group-hover:text-slate-900 group-hover:rotate-180 transition-all duration-200" />
+                  <ChevronDown size={14} className="stroke-[3px] mt-0.5 text-slate-400 group-hover:text-[#91C6BC] group-hover:rotate-180 transition-all duration-200" />
                 )}
               </button>
             ))}
@@ -71,7 +71,7 @@ const Navbar = () => {
                   setActive(link.name);
                   setIsMenuOpen(false);
                 }}
-                className="flex items-center justify-between w-full p-4 text-left text-base font-bold text-slate-700 hover:bg-slate-50 hover:text-slate-900 rounded-lg transition-colors"
+                className="flex items-center justify-between w-full p-4 text-left text-base font-bold text-slate-700 hover:bg-slate-50 hover:text-[#91C6BC] rounded-lg transition-colors"
               >
                 {link.name}
                 {link.hasDropdown && <ChevronDown size={16} />}

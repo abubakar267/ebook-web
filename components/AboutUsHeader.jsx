@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
+import BlurText from './animations/BlurText';
+import CountUp from './animations/CountUp';
 
 const AboutUsHeader = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -35,7 +37,7 @@ const AboutUsHeader = () => {
   return (
     <div className="p-4 md:px-8 md:py-24 flex flex-col md:flex-row gap-6 md:gap-8 -mt-8 max-w-[1850px] mx-auto">
       {/* Left Section - Smaller */}
-      <div className="relative w-full md:w-1/2 h-[500px] md:h-[700px] bg-[#FE5D33] overflow-hidden font-sans text-white rounded-[30px] md:rounded-[50px]">
+      <div className="relative w-full md:w-1/2 h-[500px] md:h-[700px] bg-[#4B9DA9] overflow-hidden font-sans text-white rounded-[30px] md:rounded-[50px]">
         <style jsx>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px); }
@@ -49,10 +51,18 @@ const AboutUsHeader = () => {
           .float-6 { animation: float 6.5s ease-in-out infinite 0.8s; }
         `}</style>
         
-        {/* Social Proof Badge - Top Right on Mobile */}
-        <div className="absolute top-4 right-4 md:hidden bg-black/30 backdrop-blur-md px-3 py-2 rounded-full flex items-center gap-2 border border-white/10 z-20">
-          <span className="text-yellow-400">★</span>
-          <span className="text-xs font-medium">Loved by 1M+ users worldwide</span>
+        {/* Tags/Badges - Top Right */}
+        <div className="absolute top-4 right-4 md:right-8 lg:right-12 flex flex-col md:flex-row flex-wrap gap-1.5 md:gap-3 lg:gap-4 z-20 max-w-md justify-end">
+          <div className="bg-white/10 backdrop-blur-lg px-2 py-1 md:px-3 md:py-2 rounded-full flex items-center gap-1.5 border border-white/20 shadow-lg">
+            <span className="text-yellow-400 text-xs">★</span>
+            <span className="text-[10px] md:text-xs font-medium">Loved by 1M+</span>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg px-2 py-1 md:px-3 md:py-2 rounded-full flex items-center gap-1.5 border border-white/20 shadow-lg">
+            <span className="text-[10px] md:text-xs font-medium">📚 500+ Books</span>
+          </div>
+          <div className="bg-white/10 backdrop-blur-lg px-2 py-1 md:px-3 md:py-2 rounded-full flex items-center gap-1.5 border border-white/20 shadow-lg">
+            <span className="text-[10px] md:text-xs font-medium">✨ Award Winning</span>
+          </div>
         </div>
         
         {/* Decorative Floating Circles */}
@@ -65,9 +75,13 @@ const AboutUsHeader = () => {
 
         {/* Hero Content */}
         <main className="relative z-10 flex flex-col items-start text-left mt-12 px-6 md:px-12 pt-12 md:pt-20 pb-20 md:pb-40">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
-            About Us
-          </h1>
+          <BlurText
+            text="About Us"
+            className="text-4xl sm:text-5xl font-bold mb-4 md:mb-6 leading-tight"
+            delay={150}
+            animateBy="words"
+            direction="top"
+          />
           <p className="max-w-xl text-base md:text-lg lg:text-xl opacity-90 mb-6 md:mb-10 leading-relaxed">
             Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.
             Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.
@@ -79,30 +93,56 @@ const AboutUsHeader = () => {
             <button className="bg-white text-[#FF5733] px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:shadow-lg transition-all">
               Get Started Free
             </button>
-            <button className="flex items-center gap-2 border-2 border-white/30 bg-white/10 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white/20 transition-all">
+            {/* <button className="flex items-center gap-2 border-2 border-white/30 bg-white/10 px-6 md:px-8 py-3 md:py-4 rounded-full font-bold text-base md:text-lg hover:bg-white/20 transition-all">
               <span className="w-0 h-0 border-t-8 border-t-transparent border-l-[12px] border-l-white border-b-8 border-b-transparent ml-1" />
               Watch Demo
-            </button>
+            </button> */}
           </div>
 
-          {/* Social Proof Badge - Desktop Only */}
-          <div className="hidden md:flex mt-8 md:mt-16 bg-black/30 backdrop-blur-md px-3 md:px-4 py-2 rounded-full items-center gap-2 border border-white/10">
-            <span className="text-yellow-400">★</span>
-            <span className="text-xs md:text-sm font-medium">Loved by 1M+ users worldwide</span>
+          {/* Count Up Stats - Mobile Only */}
+          <div className="md:hidden grid grid-cols-3 gap-6 w-full mt-12">
+            <CountUp
+              target={1}
+              suffix="M+"
+              heading="Active Users"
+              className="text-white"
+              headingClassName="text-white/90"
+            />
+            <CountUp
+              target={500}
+              suffix="+"
+              heading="Books"
+              className="text-white"
+              headingClassName="text-white/90"
+            />
+            <CountUp
+              target={95}
+              suffix="%"
+              heading="Satisfaction"
+              className="text-white"
+              headingClassName="text-white/90"
+            />
           </div>
+
         </main>
 
         {/* UI Mockup Placeholder (Bottom Section) */}
-        <div className="hidden md:flex absolute bottom-[-100px] left-0 w-full justify-center gap-4 px-4 pointer-events-none">
+        <div className="hidden md:flex absolute bottom-[-10px] left-0 w-full justify-center items-end gap-4 px-4 pointer-events-none">
           {/* Simplified card shapes to mimic the phone mockups */}
-          <div className="w-64 h-80 bg-white rounded-3xl shadow-2xl rotate-[-10deg] transform translate-y-10" />
-          <div className="w-64 h-80 bg-white rounded-3xl shadow-2xl translate-y-20" />
-          <div className="w-64 h-80 bg-white rounded-3xl shadow-2xl rotate-[10deg] transform translate-y-10" />
+          <div className="w-56 h-72 bg-white rounded-3xl shadow-2xl rotate-[-10deg] transform translate-y-10 overflow-hidden">
+            <img src="/book-about1.png" alt="Book" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-64 h-96 bg-white rounded-3xl shadow-2xl translate-y-20 overflow-hidden">
+            <img src="/book-about2.jpg" alt="Book" className="w-full h-full object-cover" />
+          </div>
+          <div className="w-56 h-72 bg-white rounded-3xl shadow-2xl rotate-[10deg] transform translate-y-10 overflow-hidden">
+            <img src="/book-about3.jpg" alt="Book" className="w-full h-full object-cover" />
+          </div>
         </div>
       </div>
 
       {/* Right Section - Content */}
-      <div className="flex w-full md:w-1/2 h-[400px] md:h-[700px] bg-[#ccff66] rounded-[30px] md:rounded-[50px] p-6 md:p-8 flex-col justify-center items-start gap-4 md:gap-6 relative overflow-hidden">
+      <div className="flex w-full md:w-1/2 h-[400px] md:h-[700px] bg-[#F6F3C2] rounded-[30px] md:rounded-[50px] p-6 md:p-8 flex-col justify-center items-start gap-4 md:gap-6 relative overflow-hidden">
         <style jsx>{`
           @keyframes rotate {
             from { transform: rotate(0deg); }
