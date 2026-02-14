@@ -3,9 +3,9 @@ import { Mail, ArrowUp } from 'lucide-react';
 import Image from 'next/image';
 import { Permanent_Marker } from 'next/font/google';
 
-const permanentMarker = Permanent_Marker({ 
+const permanentMarker = Permanent_Marker({
   weight: '400',
-  subsets: ['latin'] 
+  subsets: ['latin']
 });
 
 const Footer = () => {
@@ -44,10 +44,10 @@ const Footer = () => {
             >
               info@goodspeedpublishing.com
             </a>
-            
+
             <div className="flex flex-wrap gap-2 pt-4">
               {['Instagram', 'X (Formerly Twitter)', 'Facebook', 'LinkedIn'].map((social) => (
-                <button 
+                <button
                   key={social}
                   className="px-4 py-1 border border-gray-400 rounded-full text-sm hover:bg-white hover:text-black transition-colors"
                 >
@@ -63,7 +63,7 @@ const Footer = () => {
             <ul className="space-y-3 text-gray-300">
               {['Book Writing', 'Book Editing', 'Book Marketing', 'Book Publishing', 'Audio Books', 'About', 'Schedule a Call'].map((link) => (
                 <li key={link}>
-                  <a href="#" className="hover:text-[#a3e635] transition-colors">{link}</a>
+                  <a href="#" className="hover:text-[#4B9DA9] transition-colors">{link}</a>
                 </li>
               ))}
             </ul>
@@ -90,10 +90,10 @@ const Footer = () => {
 
       {/* Footer Image 2 on extreme bottom right */}
       <div className="absolute -right-8 sm:-right-10 md:-right-14 lg:-right-16 -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-16 w-24 sm:w-28 md:w-40 lg:w-48 xl:w-56 h-auto">
-        <Image 
-          src="/extra/footer-img2.png" 
-          alt="Footer decoration" 
-          width={200} 
+        <Image
+          src="/extra/footer-img2.png"
+          alt="Footer decoration"
+          width={200}
           height={200}
           className="w-full h-auto object-contain"
         />
