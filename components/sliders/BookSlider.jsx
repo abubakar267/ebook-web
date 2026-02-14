@@ -1,42 +1,42 @@
 "use client";
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, EffectCoverflow } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/effect-coverflow';
 
 const books = [
     { id: 1, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book.jpg' },
     { id: 2, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book.jpg' },
     { id: 3, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book.jpg' },
-    { id: 4, title: 'The Brave Human Mate', author: 'Michelle Arlene', color: 'bg-purple-700', image: '/book.jpg' },
-    { id: 5, title: 'Memories of Smoke', author: 'Jane Anne', color: 'bg-orange-300', image: '/book.jpg' },
-    { id: 6, title: 'Claiming Jafar', author: 'Astrid Vail', color: 'bg-orange-600', image: '/book.jpg' },
-    { id: 7, title: 'Memories of Smoke', author: 'Jane Anne', color: 'bg-orange-300', image: '/book.jpg' },
-    { id: 8, title: 'Claiming Jafar', author: 'Astrid Vail', color: 'bg-orange-600', image: '/book.jpg' },
+    // Duplicates for seamless looping (Swiper needs slidesPerView * 2)
+    { id: 4, title: 'Lead Magnet Formula', author: 'Sylvia Melena', color: 'bg-purple-600', image: '/book.jpg' },
+    { id: 5, title: 'The New Side Hustle', author: 'Andrew Richards', color: 'bg-orange-400', image: '/book.jpg' },
+    { id: 6, title: 'Make Money Online', author: 'William Richards', color: 'bg-orange-500', image: '/book.jpg' },
 ];
 
-const BookSlider = () => {
+const BookSlider = ({ className = "" }) => {
     return (
-        <div className="bg-transparent py-20 overflow-visible">
+        <div className={`bg-transparent overflow-visible ${className} py-20`}>
             <Swiper
                 modules={[Autoplay]}
-                spaceBetween={0}
-                slidesPerView={6}
+                spaceBetween={40}
+                slidesPerView={3}
                 centeredSlides={true}
                 loop={true}
-                autoplay={{ delay: 4000 }}
-                breakpoints={{
-                    640: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
+                speed={1000}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
                 }}
                 className="book-swiper !overflow-visible"
             >
                 {books.map((book) => (
-                    <SwiperSlide key={book.id} className="flex flex-col items-center">
+                    <SwiperSlide key={book.id} className="!w-auto">
                         {/* The Main Container with tilted effect */}
-                        <div className="relative group perspective-1000 w-48 h-64">
+                        <div className="relative group perspective-1000 w-48 h-64 mx-4">
 
                             {/* Colored Background Card */}
                             <div className={`aspect-[3/4] bg-book-card rounded-lg shadow-xl transition-transform duration-500 group-hover:scale-112 group-hover:-translate-y-4`} />
@@ -62,11 +62,21 @@ const BookSlider = () => {
           perspective: 1000px;
         }
         
-        /* Optional: Scale up the center slide slightly */
-        .swiper-slide-active {
-          transform: scale(1.1);
-          z-index: 10;
-          transition: transform 0.5s ease;
+        /* Target the INNER container for the scaling to avoid conflicts with Swiper's own transforms on the slide */
+        .swiper-slide .perspective-1000 {
+            transition: all 1s ease-out;
+            will-change: transform, opacity; 
+            transform: scale(0.8);
+            opacity: 0.6;
+            filter: blur(1px);
+        }
+
+        /* Active slide inner container: larger */
+        .swiper-slide-active .perspective-1000 {
+          transform: scale(1.3);
+          opacity: 1;
+          filter: blur(0px);
+          z-index: 50;
         }
       `}</style>
         </div>

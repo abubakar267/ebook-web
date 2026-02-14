@@ -24,8 +24,8 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center gap-2 cursor-pointer flex-shrink-0 z-20">
             <div className="relative w-8 h-8 flex items-center justify-center">
-              <div className="w-6 h-6 border-2 border-slate-900 rounded-full"></div>
-              <div className="absolute top-1 right-1 w-2 h-2 bg-slate-900 rounded-full"></div>
+              <div className="w-6 h-6 border-2 border-[#4B9DA9] rounded-full"></div>
+              <div className="absolute top-1 right-1 w-2 h-2 bg-[#4B9DA9] rounded-full"></div>
             </div>
             <span className="text-xl md:text-2xl font-black tracking-tight text-slate-900">
               Goodspeed Tech
@@ -39,7 +39,7 @@ const Navbar = () => {
                 key={link.name}
                 onClick={() => setActive(link.name)}
                 className={`group flex items-center gap-1.5 text-[15px] font-bold tracking-tight transition-colors duration-200 outline-none
-                  ${active === link.name ? 'text-slate-900' : 'text-slate-600 hover:text-slate-900'}
+                  ${active === link.name ? 'text-[#4B9DA9]' : 'text-slate-600 hover:text-[#4B9DA9]'}
                 `}
               >
                 {link.name}

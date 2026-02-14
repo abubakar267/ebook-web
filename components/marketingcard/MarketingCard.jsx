@@ -3,7 +3,7 @@ import { Mail, Instagram, Twitter, Linkedin, Facebook, Heart, MessageCircle, Sha
 
 const MarketingCard = () => {
     return (
-        <section className="w-full bg-[var(--color-brand-green)] py-20 px-4 md:px-8 text-slate-900 overflow-hidden">
+        <section className="w-full bg-[#F6F3C2] py-20 px-4 md:px-8 text-slate-900 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 {/* Title */}
                 <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-16 tracking-tight">
@@ -55,7 +55,7 @@ const MarketingCard = () => {
                                 <div className="flex gap-3 px-5 py-4 overflow-x-hidden">
                                     {['You', 'Sarah', 'Mike', 'BookClub'].map((name, i) => (
                                         <div key={i} className="flex flex-col items-center gap-1">
-                                            <div className={`w-14 h-14 rounded-full p-[2px] ${i === 0 ? 'border-2 border-dashed border-gray-300' : 'bg-gradient-to-tr from-yellow-400 to-purple-600'}`}>
+                                            <div className={`w-14 h-14 rounded-full p-[2px] ${i === 0 ? 'border-2 border-dashed border-gray-300' : 'bg-gradient-to-tr from-slate-50 to-[#E37434]'}`}>
                                                 <div className="w-full h-full bg-gray-200 rounded-full border-2 border-white" />
                                             </div>
                                             <span className="text-xs font-medium">{name}</span>
@@ -67,7 +67,7 @@ const MarketingCard = () => {
                                 <div className="flex-1 overflow-hidden bg-gray-50/50">
                                     <div className="bg-white pb-4 mb-2 shadow-sm">
                                         <div className="flex items-center gap-3 px-4 py-3">
-                                            <div className="w-8 h-8 rounded-full bg-purple-500"></div>
+                                            <div className="w-8 h-8 rounded-full bg-[#E37434]"></div>
                                             <span className="font-bold text-sm">BestSeller_Author</span>
                                         </div>
                                         {/* Post Image Placeholder */}
@@ -80,10 +80,10 @@ const MarketingCard = () => {
                                             </div>
                                             {/* Floating Reactions */}
                                             <div className="absolute bottom-4 right-4 flex flex-col gap-2">
-                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-red-500 animate-bounce">
+                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-[#E37434] animate-bounce">
                                                     <Heart size={14} fill="currentColor" />
                                                 </div>
-                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-blue-500 animate-pulse delay-75">
+                                                <div className="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center text-[#4B9DA9] animate-pulse delay-75">
                                                     <Star size={14} fill="currentColor" />
                                                 </div>
                                             </div>
@@ -120,9 +120,9 @@ const MarketingCard = () => {
                                 Leveraging third-party voices to build credibility and buzz.
                             </p>
                             <div className="mt-4 flex gap-2">
-                                <div className="h-8 w-8 rounded-full bg-yellow-400"></div>
-                                <div className="h-8 w-8 rounded-full bg-pink-400"></div>
-                                <div className="h-8 w-8 rounded-full bg-blue-400"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#91C6BC]"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#E37434]"></div>
+                                <div className="h-8 w-8 rounded-full bg-[#4B9DA9]"></div>
                             </div>
                         </div>
 
