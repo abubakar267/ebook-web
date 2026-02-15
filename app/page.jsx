@@ -36,19 +36,30 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-1">
         {/* Blue Hero Section Wrapper */}
-        <div className="bg-slate-50 relative pb-24">
+        <div className="bg-slate-50 relative pb-1">
           <div className="mx-4 sm:mr-0">
             <MainHeader />
           </div>
-
-
-
-          {/* <div className="absolute bottom-0 w-full z-20 translate-y-1/2 md:translate-y-1/3 pl-30" >
-            <BookSlider />
-          </div> */}
         </div>
 
         {/* Content on White Background */}
+
+        <div>
+          <div className="w-full bg-slate-50 pb-38 pt-0 px-6">
+            <div className="max-w-6xl mx-auto text-center">
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight text-slate-900">
+                <span className="inline-block bg-[#4B9DA9] text-white px-2 py-1 rotate-[-2deg] mr-2 rounded-md">
+                  Lorem Ipsum
+                </span>
+                Lorem sit amet
+                <span className="inline-block bg-[#E37434] text-white px-2 py-1 rotate-[1deg] ml-2 rounded-md">
+                  sit amet boldly
+                </span>
+              </h2>
+            </div>
+          </div>
+        </div>
+
         <div className="bg-slate-50 mt-0">
           <FeatureCards />
 

@@ -209,7 +209,7 @@ const FeatureCards = () => {
                 </h2>
             </div> */}
 
-            <div className="bg-[#F6F3C2] rounded-r-[50px] rounded-l-none py-8 pr-8 pl-0 md:py-16 md:pr-0 md:pl-0 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)] relative overflow-hidden">
+            <div className="bg-[#F6F3C2] rounded-r-[50px] ml-4 md:ml-0 rounded-l-[50px] md:rounded-l-none py-8 pr-8 pl-8 md:py-16 md:pr-0 md:pl-0 shadow-[0_-10px_20px_-5px_rgba(0,0,0,0.05)] relative overflow-hidden">
                 {/* Decorative Shape resembling header style */}
                 <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-white opacity-40 blur-3xl pointer-events-none"></div>
 
@@ -223,23 +223,32 @@ const FeatureCards = () => {
                     <rect width="100" height="100" fill="url(#dots)" />
                 </svg>
 
+                {/* Additional Random Transparent Shapes */}
+                <svg className="absolute top-[40%] left-[15%] w-24 h-24 text-[#E37434] opacity-10 rotate-[-15deg] pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 22h20L12 2z" />
+                </svg>
+                <div className="absolute top-10 right-[25%] w-32 h-32 border-4 border-[#4B9DA9] rounded-full opacity-10 pointer-events-none"></div>
+                <svg className="absolute bottom-12 right-[10%] w-40 h-40 text-[#91C6BC] opacity-10 rotate-45 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+
                 <div className="max-w-[90rem] mx-auto relative z-10">
 
                     {/* Wrapper with padding - Left padding creates gutter for fade so card isn't obscured */}
-                    <div className="relative -ml-4 md:-ml-16 pr-0 md:pr-0 md:-mr-[30px]">
+                    <div className="relative ml-0 md:-ml-16 pr-0 md:pr-0 md:-mr-[30px]">
                         {/* Navigation Arrow - Vertically Centered on Right, Outside Mask */}
-                        <div className="absolute right-4 top-1/2 -translate-y-1/2 z-[60] hidden md:block translate-x-1/2 md:right-[-90px]">
-                            <button className="swiper-prev-btn bg-white p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all text-slate-800 border border-slate-100">
-                                <ArrowRight className="w-6 h-6" />
+                        <div className="absolute right-0 top-1/2 -translate-y-1/2 z-[60] block translate-x-1/2 md:right-[-90px]">
+                            <button className="swiper-prev-btn bg-white p-3 md:p-4 rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all text-slate-800 border border-slate-100">
+                                <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
                             </button>
                         </div>
 
                         {/* Swiper with CSS Mask for perfect blending - Tighter mask to keep cards visible */}
-                        <div className="pl-4 md:pl-16 [mask-image:linear-gradient(to_right,transparent,black_16px,black_calc(100%-20px),transparent)] md:[mask-image:linear-gradient(to_right,transparent,black_64px,black_calc(100%-100px),transparent)] py-4">
+                        <div className="pl-0 md:pl-16 md:[mask-image:linear-gradient(to_right,transparent,black_64px,black_calc(100%-100px),transparent)] py-4">
                             <Swiper
                                 key="manual-slider-v2"
                                 modules={[Navigation]}
-                                spaceBetween={32}
+                                spaceBetween={24}
                                 slidesPerView={1}
                                 allowTouchMove={false}
                                 navigation={{
@@ -249,9 +258,11 @@ const FeatureCards = () => {
                                 breakpoints={{
                                     768: {
                                         slidesPerView: 2,
+                                        spaceBetween: 1, // Minimize gap on desktop as requested before
                                     },
                                     1200: {
                                         slidesPerView: 3,
+                                        spaceBetween: 1,
                                     },
                                 }}
                                 loop={true}
@@ -260,19 +271,19 @@ const FeatureCards = () => {
                             >
                                 {cards.map((card) => (
                                     <SwiperSlide key={card.id} className="!h-auto">
-                                        <div className="bg-white text-slate-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col h-full border border-slate-200 group min-h-[500px]">
-                                            <div className={`${card.graphicBg} pt-8 px-4 pb-0 overflow-hidden relative transition-colors h-48 shrink-0`}>
+                                        <div className="bg-white mt-1 text-slate-900 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-200 group min-h-[380px] md:min-h-[500px] max-w-[450px]">
+                                            <div className={`${card.graphicBg} pt-6 md:pt-8 px-4 pb-0 overflow-hidden relative transition-colors h-36 md:h-48 shrink-0`}>
                                                 <card.Graphic />
                                             </div>
 
-                                            <div className="p-8 flex-1 flex flex-col">
-                                                <h3 className="text-2xl font-bold mb-4 line-clamp-2">{card.title}</h3>
-                                                <p className="text-slate-600 mb-8 flex-1 leading-relaxed line-clamp-4">
+                                            <div className="p-6 md:p-8 flex-1 flex flex-col">
+                                                <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-4 line-clamp-2">{card.title}</h3>
+                                                <p className="text-slate-600 text-sm md:text-base mb-4 md:mb-8 flex-1 leading-relaxed line-clamp-4">
                                                     {card.description}
                                                 </p>
-                                                <button className={`w-full py-3 px-6 rounded-lg ${card.buttonColor} text-white font-bold transition-colors flex items-center justify-center gap-2 group-hover:gap-3`}>
+                                                {/* <button className={`w-full py-3 px-6 rounded-lg ${card.buttonColor} text-white font-bold transition-colors flex items-center justify-center gap-2 group-hover:gap-3`}>
                                                     {card.buttonText} <ArrowRight className="w-4 h-4" />
-                                                </button>
+                                                </button> */}
                                             </div>
                                         </div>
                                     </SwiperSlide>

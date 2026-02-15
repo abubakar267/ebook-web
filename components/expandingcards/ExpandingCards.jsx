@@ -27,7 +27,7 @@ const cards = [
         icon: <Globe size={24} />,
         tags: ["Print on Demand", "E-book", "Global Retailers"],
         image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop", // Books/Library
-        color: "from-[#E37434]/80 to-[#c25e22]/80" // Orange
+        color: "from-cyan-900/80 to-slate-700/80" // Dull Dark Cyan
     },
     {
         id: 4,
@@ -36,7 +36,7 @@ const cards = [
         icon: <Megaphone size={24} />,
         tags: ["Social Media", "Book Tours", "PR Campaigns"],
         image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop", // Marketing/Team
-        color: "from-[#E37434]/80 to-[#F6F3C2]/80" // Orange to Yellow
+        color: "from-teal-800/80 to-slate-600/80" // Dull Teal/Slate
     }
 ];
 
