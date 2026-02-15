@@ -267,11 +267,11 @@ const FeatureCards = () => {
                                 }}
                                 loop={true}
                                 speed={800}
-                                className="!overflow-visible !pb-10"
+                                className="!overflow-visible !pb-3"
                             >
                                 {cards.map((card) => (
                                     <SwiperSlide key={card.id} className="!h-auto">
-                                        <div className="bg-white mt-1 text-slate-900 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-200 group min-h-[380px] md:min-h-[500px] max-w-[450px]">
+                                        <div className="bg-white mt-1 text-slate-900 rounded-[30px] md:rounded-[40px] overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full border border-slate-200 group min-h-[380px] md:min-h-[500px] max-w-[450px]">
                                             <div className={`${card.graphicBg} pt-6 md:pt-8 px-4 pb-0 overflow-hidden relative transition-colors h-36 md:h-48 shrink-0`}>
                                                 <card.Graphic />
                                             </div>

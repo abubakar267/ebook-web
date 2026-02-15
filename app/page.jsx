@@ -42,6 +42,8 @@ export default function Home() {
           </div>
         </div>
 
+        <ExpandingCards />
+
         {/* Content on White Background */}
 
         <div>
@@ -110,7 +112,7 @@ export default function Home() {
             </div>
           </div>
 
-          <ExpandingCards />
+
 
           {/* <ContactCTA /> */}
           <FooterCTA />
