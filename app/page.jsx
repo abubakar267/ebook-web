@@ -9,6 +9,8 @@ import FeatureCards from "../components/featurecards/FeatureCards";
 import StoryBanner from "../components/storybanner/StoryBanner";
 import MarketingCard from "../components/marketingcard/MarketingCard";
 import ContactCTA from "../components/contactcta/ContactCTA";
+import FooterCTA from "../components/footercta/FooterCTA";
+import ExpandingCards from "../components/expandingcards/ExpandingCards";
 import LogoLoop from "../components/logoloop/LogoLoop";
 
 const logos = [
@@ -57,39 +59,31 @@ export default function Home() {
           <div className="px-4 pb-12 pt-12 bg-slate-50">
             {/* Publishing Partners Section */}
             <div className="py-8">
-              <div className="text-center mb-10">
-                <span className="text-sm font-bold tracking-[0.2em] text-[#8100D1] uppercase block mb-3">
-                  Global Distribution
-                </span>
-                <h3 className="text-2xl md:text-3xl font-extrabold text-slate-900">
-                  Publish & Sell on Major Platforms
-                </h3>
-              </div>
 
-              <div className="w-full mx-auto overflow-hidden">
+
+              <div className="w-full mt-15 mx-auto overflow-hidden">
 
                 <LogoLoop
                   logos={[
-                    { name: "Barnes & Noble", src: "https://cdn.worldvectorlogo.com/logos/barnes-noble.svg" },
-                    { name: "Amazon Kindle", src: "https://cdn.worldvectorlogo.com/logos/amazon-kindle.svg" },
-                    { name: "Google Books", src: "https://cdn.worldvectorlogo.com/logos/google-books.svg" },
-                    { name: "Rakuten Kobo", src: "https://cdn.worldvectorlogo.com/logos/rakuten-kobo.svg" },
-                    { name: "Wattpad", src: "https://cdn.worldvectorlogo.com/logos/wattpad-1.svg" },
-                    { name: "Scribd", src: "https://cdn.worldvectorlogo.com/logos/scribd-1.svg" },
-                    { name: "Apple Books", src: "https://cdn.worldvectorlogo.com/logos/apple-books.svg" },
-                    { name: "Books A Million", src: "https://cdn.worldvectorlogo.com/logos/books-a-million.svg" } // Risky
+                    { name: "Barnes & Noble", src: "/logos/barnes.png" },
+                    { name: "Amazon Kindle", src: "/logos/amazon.png" },
+                    { name: "Google Books", src: "/logos/google.png" },
+                    { name: "Rakuten Kobo", src: "/logos/RK.png" },
+                    { name: "Wattpad", src: "/logos/W.png" },
+                    { name: "Books A Million", src: "/logos/BAK.svg" },
+                    { name: "Apple Books", src: "/logos/apple.png" },
                   ]}
-                  // I will stick to WorldVectorLogo for consistency.
                   speed={30}
                   direction="left"
-                  gap={40}
+                  gap={20}
+                  logoHeight={80}
                   renderItem={(item) => (
-                    <div className="flex items-center justify-center px-10 py-6 border border-slate-800 rounded-full bg-transparent min-w-[220px] h-28 mix-blend-multiply">
+                    <div className="flex items-center justify-center px-8 py-4 border border-slate-800 rounded-full bg-transparent mix-blend-multiply transition-all hover:bg-slate-50">
                       {/* Force logos to be black */}
                       <img
                         src={item.src}
                         alt={item.name}
-                        className="h-10 w-auto object-contain brightness-0 opacity-90"
+                        className="h-20 md:h-20 w-auto object-contain brightness-0 opacity-80"
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.style.display = 'none';
@@ -105,7 +99,11 @@ export default function Home() {
             </div>
           </div>
 
-          <ContactCTA />
+          <ExpandingCards />
+
+          {/* <ContactCTA /> */}
+          <FooterCTA />
+
 
           {/* <ServicesComponent /> */}
         </div>
