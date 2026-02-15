@@ -16,12 +16,12 @@ const MainHeader = () => {
 
                             {/* Decorative Background Shapes */}
                             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-white opacity-40 blur-3xl pointer-events-none"></div>
-                            <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-56 h-56 rounded-full bg-[#E37434] opacity-20 blur-2xl pointer-events-none"></div>
+
 
                             {/* Random Icons & Shapes */}
                             {/* Large Heart - Top Right */}
-                            <svg className="absolute top-10 right-[20%] w-32 h-32 text-[#E37434] opacity-20 rotate-12 pointer-events-none animate-pulse" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            <svg className="absolute top-10 right-[20%] w-32 h-32 text-[#8B9DA9] opacity-20 rotate-12 pointer-events-none animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 22h20L12 2z" />
                             </svg>
                             {/* Giant Star - Bottom Left */}
                             <svg className="absolute bottom-10 left-[5%] w-40 h-40 text-[#4B9DA9] opacity-20 -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
@@ -51,6 +51,15 @@ const MainHeader = () => {
                                 <path d="M0 10 Q 25 20 50 10 T 100 10" fill="none" stroke="currentColor" strokeWidth="2" />
                             </svg>
 
+                            {/* Additional Shapes */}
+                            <svg className="absolute top-[15%] left-[50%] w-20 h-20 text-white opacity-10 rotate-45 pointer-events-none" viewBox="0 0 24 24" fill="currentColor">
+                                <rect width="20" height="20" x="2" y="2" rx="4" />
+                            </svg>
+                            <div className="absolute bottom-20 right-[35%] w-16 h-16 bg-[#E37434] rounded-full opacity-10 blur-sm pointer-events-none"></div>
+                            <svg className="absolute top-[60%] left-[10%] w-32 h-32 text-[#91C6BC] opacity-5 -rotate-12 pointer-events-none" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1">
+                                <path d="M12 2L2 22h20L12 2z" />
+                            </svg>
+
                             {/* Right Side Slider Section */}
                             <div className="absolute right-[-250px] top-1/2 -translate-y-1/2 w-[60%] z-10 opacity-90 scale-90">
                                 <BookSlider />
@@ -62,16 +71,16 @@ const MainHeader = () => {
                             {/* Left Side Fade Overlay */}
                             <div className="absolute left-80 top-0 bottom-0 w-[900px] bg-gradient-to-r from-[#7AB2B2] via-[#7AB2B2] to-transparent z-20 pointer-events-none"></div>
 
-                            
+
                             <div className="relative z-30 max-w-3xl">
                                 {/* Backdrop for Text legibility */}
                                 {/* <div className="absolute inset-0 -m-10 bg-[#7AB2B2]/40 -z-10 rounded-3xl"></div> */}
 
-                                <div className="inline-block mb-4">
+                                {/* <div className="inline-block mb-4">
                                     <span className="bg-[#4B9DA9]/10 text-[#4B9DA9] border border-[#4B9DA9]/20 px-3 py-1.5 rounded-full font-bold text-xs tracking-wide uppercase">
                                         Innovative Solutions
                                     </span>
-                                </div>
+                                </div> */}
 
                                 <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] leading-[1.1] mb-6 tracking-tight text-left">
                                     <BlurText
@@ -81,7 +90,7 @@ const MainHeader = () => {
                                         direction="top"
                                         className=""
                                     />
-                                    
+
                                     <BlurText
                                         text="Digital Experiences"
                                         delay={200}
@@ -107,10 +116,10 @@ const MainHeader = () => {
                                         </span>
                                     </button>
 
-                                    <button className="w-[210px] px-5 py-3 rounded-full font-bold text-sm text-[#E37434] border-2 border-[#E37434]/20 hover:bg-[#E37434]/5 transition-colors flex items-center">
+                                    {/* <button className="w-[210px] px-5 py-3 rounded-full font-bold text-sm text-[#E37434] border-2 border-[#E37434]/20 hover:bg-[#E37434]/5 transition-colors flex items-center">
                                         <span className="mr-2 text-lg">⚡</span>
                                         View Our Work
-                                    </button>
+                                    </button> */}
                                 </div>
                             </div>
                         </div>

@@ -44,7 +44,7 @@ const MarketingCard = () => {
 
                                 {/* App Header */}
                                 <div className="px-5 py-4 flex justify-between items-center border-b border-gray-100">
-                                    <div className="font-bold text-xl">BookGram</div>
+                                    <div className="font-bold text-xl">Instagram</div>
                                     <div className="flex gap-3">
                                         <Heart className="w-6 h-6" />
                                         <MessageCircle className="w-6 h-6" />
@@ -68,7 +68,7 @@ const MarketingCard = () => {
                                     <div className="bg-white pb-4 mb-2 shadow-sm">
                                         <div className="flex items-center gap-3 px-4 py-3">
                                             <div className="w-8 h-8 rounded-full bg-[#E37434]"></div>
-                                            <span className="font-bold text-sm">BestSeller_Author</span>
+                                            <span className="font-bold text-sm">Evercrest Publishing    </span>
                                         </div>
                                         {/* Post Image Placeholder */}
                                         <div className="w-full aspect-square bg-slate-200 relative overflow-hidden group">
