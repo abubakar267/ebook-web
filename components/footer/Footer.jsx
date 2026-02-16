@@ -1,102 +1,102 @@
 import React from 'react';
-import { Mail, ArrowUp } from 'lucide-react';
-import Image from 'next/image';
-import { Permanent_Marker } from 'next/font/google';
-
-const permanentMarker = Permanent_Marker({
-  weight: '400',
-  subsets: ['latin']
-});
+import {
+  Instagram,
+  Facebook,
+  Linkedin,
+  Youtube,
+  Twitter,
+  ChevronDown,
+  Podcast
+} from 'lucide-react';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1a1a1a] text-white pt-16 font-sans relative overflow-hidden">
-      {/* Footer Image on extreme left */}
-      <div className="z-0 absolute -left-8 sm:-left-10 md:-left-14 lg:-left-18 top-1 sm:top-2 md:top-12 lg:top-20 w-24 sm:w-28 md:w-40 lg:w-48 xl:w-56 h-auto">
-        <Image 
-          src="/extra/footer-img.png" 
-          alt="Footer decoration" 
-          width={200} 
-          height={200}
-          className="w-full h-auto object-contain"
-        />
-      </div>
-      
-      <div className="max-w-7xl mx-auto px-6 relative z-1">
-        {/* Main Heading */}
-        <h2 className={`${permanentMarker.className} text-[#91c6bc] text-3xl md:text-7xl mb-8 sm:mb-12 tracking-tighter`}>
-          Let's Start Now!
-        </h2>
+    <footer className="bg-slate-50 pt-16 pb-8 border-t border-slate-200 font-sans text-slate-600">
+      <div className="max-w-7xl mx-auto px-6">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-gray-800">
-          {/* Column 1: Contact */}
-          <div className="space-y-6">
-            <p className="text-white text-[16px] sm:text-lg max-w-xs">
-              Expertise meets passion—that's the Goodspeed Publishing difference.
+        {/* Top Section: Links & Language */}
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-12">
+          {/* Navigation Links */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-sm font-semibold text-slate-800">
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Our Team</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Newsroom</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Community</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Help</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Developers</a>
+          </div>
+
+          {/* Language Selector */}
+          <div className="flex items-center gap-2 text-sm font-semibold text-slate-800 cursor-pointer hover:text-[#4B9DA9] transition-colors">
+            <span>English</span>
+            <ChevronDown size={16} />
+          </div>
+        </div>
+
+        {/* Middle Section: Socials & Newsletter */}
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-16">
+
+          {/* Social Icons */}
+          <div className="flex gap-4">
+            {[
+              { Icon: Instagram, href: '#' },
+              { Icon: Facebook, href: '#' },
+              { Icon: Linkedin, href: '#' },
+              { Icon: Youtube, href: '#' },
+              { Icon: Podcast, href: '#' }, // Using Podcast icon as a placeholder for the mic icon
+              { Icon: Twitter, href: '#' }, // Using Twitter icon for X
+            ].map(({ Icon, href }, index) => (
+              <a
+                key={index}
+                href={href}
+                className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 hover:bg-[#4B9DA9] hover:text-white transition-all duration-300"
+              >
+                <Icon size={20} />
+              </a>
+            ))}
+          </div>
+
+          {/* Newsletter */}
+          <div className="w-full max-w-lg">
+            <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+              Get exclusive Publishing & Marketing tips to help you create and sell your books more effectively! You can unsubscribe at any time.
             </p>
-            <a 
-              href="mailto:info@goodspeedpublishing.com" 
-              className="text-[#91c6bc] text-[14px] md:text-2xl font-bold break-words hover:opacity-80 transition-opacity"
-            >
-              info@goodspeedpublishing.com
-            </a>
-
-            <div className="flex flex-wrap gap-2 pt-4">
-              {['Instagram', 'X (Formerly Twitter)', 'Facebook', 'LinkedIn'].map((social) => (
-                <button
-                  key={social}
-                  className="px-4 py-1 border border-gray-400 rounded-full text-sm hover:bg-white hover:text-black transition-colors"
-                >
-                  {social}
-                </button>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Email"
+                className="flex-1 px-4 py-3 rounded-lg border border-slate-300 bg-white text-slate-800 placeholder-slate-500 focus:outline-none focus:border-[#4B9DA9] focus:ring-1 focus:ring-[#4B9DA9]"
+              />
+              <button className="px-8 py-3 bg-[#4B9DA9] text-white font-bold rounded-lg hover:bg-[#3d8b96] transition-colors shadow-sm">
+                Submit
+              </button>
             </div>
           </div>
+        </div>
 
-          {/* Column 2: Links */}
-          <div className="md:pl-12 sm:border-l border-gray-800">
-            <h3 className="text-xl font-bold mb-6">Useful Links</h3>
-            <ul className="space-y-3 text-gray-300">
-              {['Book Writing', 'Book Editing', 'Book Marketing', 'Book Publishing', 'Audio Books', 'About', 'Schedule a Call'].map((link) => (
-                <li key={link}>
-                  <a href="#" className="hover:text-[#4B9DA9] transition-colors">{link}</a>
-                </li>
-              ))}
-            </ul>
+        {/* Bottom Section: Logo & Legal */}
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-200 gap-8">
+
+          {/* Logo (from Navbar) */}
+          <div className="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" className="h-12 w-auto object-contain opacity-80 mix-blend-multiply" />
           </div>
 
-          {/* Column 3: Message Box */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold">Give Us a Message</h3>
-            <textarea 
-              placeholder="Type your message here..."
-              className="w-full h-32 bg-white/10 border border-gray-600 rounded-2xl px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-[#91c6bc] focus:ring-2 focus:ring-[#91c6bc]/50 transition-all resize-none"
-            />
-            <button className="w-full bg-[#91c6bc] text-black font-bold py-3 rounded-full hover:bg-[#7fb5ab] transition-colors">
-              Send Message
-            </button>
+          {/* Legal Links & Copyright */}
+          <div className="flex flex-col items-center md:items-end gap-4 text-xs text-slate-500">
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-[#4B9DA9] transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-[#4B9DA9] transition-colors">Terms & Conditions</a>
+              <a href="#" className="hover:text-[#4B9DA9] transition-colors">Security</a>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+              <span>Copyright © {currentYear} Goodspeed Publishing. All rights reserved.</span>
+              {/* Optional B-Corp logo placeholder if needed, otherwise omitted as per user request to use Navbar logo */}
+            </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="py-8 text-white text-sm relative z-1">
-          © 2026 Goodspeed Publishing. All Rights Reserved
-        </div>
-      </div>
-
-      {/* Footer Image 2 on extreme bottom right */}
-      <div className="absolute -right-8 sm:-right-10 md:-right-14 lg:-right-16 -bottom-8 sm:-bottom-10 md:-bottom-12 lg:-bottom-16 w-24 sm:w-28 md:w-40 lg:w-48 xl:w-56 h-auto">
-        <Image
-          src="/extra/footer-img2.png"
-          alt="Footer decoration"
-          width={200}
-          height={200}
-          className="w-full h-auto object-contain"
-        />
       </div>
     </footer>
   );
