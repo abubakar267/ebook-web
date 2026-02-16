@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, ArrowRight, Laptop, Lamp, BookOpen, Coffee, Sparkles } from 'lucide-react';
 import FooterIllustration from './FooterIllustration';
+import Link from 'next/link';
 
 const FooterCTA = () => {
     return (
@@ -15,9 +16,11 @@ const FooterCTA = () => {
                     <p className="text-lg md:text-xl text-white/90 mb-8 max-w-lg leading-relaxed">
                         Ready to bring your ideas to life? Contact us today to discuss your project and see how we can help you succeed.
                     </p>
-                    <button className="bg-[#1f2937] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-800 transition-transform transform hover:scale-105 flex items-center gap-3 mx-auto md:mx-0">
-                        Contact Us <ArrowRight size={20} />
-                    </button>
+                    <Link href="/contact-us">
+                        <button className="bg-[#1f2937] text-white font-bold py-4 px-8 rounded-full shadow-lg hover:bg-gray-800 transition-transform transform hover:scale-105 flex items-center gap-3 mx-auto md:mx-0">
+                            Contact Us <ArrowRight size={20} />
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Illustration Area */}
