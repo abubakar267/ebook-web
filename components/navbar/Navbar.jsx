@@ -28,8 +28,8 @@ const Navbar = () => {
 
   return (
     <nav className="relative bg-white font-sans border-b border-gray-100 z-100">
-      <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 md:h-16 relative">
+      <div className="w-full px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-between md:justify-start md:gap-12 h-14 md:h-16 relative">
 
           {/* Logo */}
           <Link href="/" className="flex items-center cursor-pointer flex-shrink-0 z-20">
@@ -37,8 +37,8 @@ const Navbar = () => {
             <img src="/logo.png" alt="Logo" className="w-70 h-20 object-contain" />
           </Link>
 
-          {/* Desktop Navigation - Absolute Centered */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          {/* Desktop Navigation - Left Aligned */}
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -54,6 +54,25 @@ const Navbar = () => {
                 )}
               </Link>
             ))}
+          </div>
+
+          {/* Desktop CTA Button */}
+          <div className="hidden md:flex ml-auto">
+            <Link href="/contact-us">
+              <button className="relative px-6 py-2.5 bg-[#E37434] text-white font-bold rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-lg group">
+                <span className="relative z-10">Contact Us</span>
+                <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 animate-shine group-hover:animate-none" />
+              </button>
+            </Link>
+            <style jsx global>{`
+              @keyframes shine {
+                0% { left: -100%; }
+                100% { left: 200%; }
+              }
+              .animate-shine {
+                animation: shine 3s infinite linear;
+              }
+            `}</style>
           </div>
 
           {/* Mobile Menu Button */}

@@ -12,7 +12,7 @@ const CardGraphic1 = () => (
                 key={i}
                 className={`w-4 rounded-t-sm transition-all duration-500 hover:translate-y-2 ${['bg-[#4B9DA9]', 'bg-[#3A8D99]', 'bg-[#E37434]', 'bg-[#91C6BC]', 'bg-white', 'bg-[#3A8D99]'][i % 6]
                     }`}
-                style={{ height: `${Math.max(40, Math.random() * 100)}%` }}
+                style={{ height: `${40 + ((i * 37) % 60)}%` }}
             />
         ))}
     </div>
