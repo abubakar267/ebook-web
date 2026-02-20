@@ -103,7 +103,7 @@ const MainHeader = () => {
 
                                 <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#FFFFFF] leading-[1.1] mb-6 tracking-tight text-left">
                                     <BlurText
-                                        text="Building Future-Ready"
+                                        text="Thoughtful Publishing."
                                         delay={200}
                                         animateBy="words"
                                         direction="top"
@@ -111,7 +111,7 @@ const MainHeader = () => {
                                     />
 
                                     <BlurText
-                                        text="Digital Experiences"
+                                        text="Real Results."
                                         delay={200}
                                         animateBy="words"
                                         direction="top"
@@ -121,13 +121,20 @@ const MainHeader = () => {
 
 
 
-                                <p className="text-base md:text-lg font-medium text-slate-800 mb-6 max-w-xl leading-relaxed opacity-90 text-left">
-                                    We transform complex challenges into elegant, high-performance software solutions. Elevate your business with our cutting-edge development expertise.
+                                <p className="text-[14px] md:text-lg font-medium text-slate-800 mb-6 max-w-xl leading-relaxed opacity-90 text-left">
+                                    We collaborate with writers to develop manuscripts that are professionally written, carefully edited, thoughtfully designed, and responsibly published.
+                                    <br/><br/>
+                                    Some authors choose independent publishing. Others aim for traditional routes. In both cases, the foundation remains the same. Clarity, structure, and readiness for a competitive marketplace.
+                                    <br/><br/>
+                                    Publishing is not simply about printing a book.
+                                    <br/>
+                                    It is about preparing it properly
+                            
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row items-left justify-start gap-6">
                                     <button className="w-[210px] bg-[#4B9DA9] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#3A8D99] transition-all transform hover:scale-105 hover:shadow-xl flex items-center group">
-                                        Start Your Project
+                                        Get a quote
                                         <span className="ml-2 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white text-[#4B9DA9] transition-colors">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 transform group-hover:-rotate-45 transition-transform duration-300" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />

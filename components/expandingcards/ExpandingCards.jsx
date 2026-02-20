@@ -4,8 +4,8 @@ import { ArrowUpRight, BookOpen, PenTool, Globe, Megaphone } from 'lucide-react'
 const cards = [
     {
         id: 1,
-        title: "Editorial Excellence",
-        description: "Review, editing, and proofreading to perfect your manuscript.",
+        title: "Editing",
+        description: "Polish your manuscript with professional editorial guidance. From structural feedback to line-level refinement. We help your story flow clearly and read effortlessly.",
         icon: <PenTool size={24} />,
         tags: ["Editing", "Proofreading", "Manuscript Review"],
         image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop", // Writing/Editing
@@ -13,8 +13,8 @@ const cards = [
     },
     {
         id: 2,
-        title: "Custom Book Design",
-        description: "Award-winning cover art and professional interior formatting.",
+        title: "Ghostwriting",
+        description: "Bring your ideas to life with experienced writers who capture your voice. From concept to completed manuscript, we craft compelling narratives that feel authentically yours.",
         icon: <BookOpen size={24} />,
         tags: ["Cover Design", "Typesetting", "Illustrations"],
         image: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?q=80&w=800&auto=format&fit=crop", // Book Design/Art
@@ -22,8 +22,8 @@ const cards = [
     },
     {
         id: 3,
-        title: "Global Distribution",
-        description: "Reach readers worldwide through major retailers and platforms.",
+        title: "Global Publishing",
+        description: "From local bookshelves to international markets, we guide your book through every step of publication and distribution. Your work reaches readers wherever it belongs.",
         icon: <Globe size={24} />,
         tags: ["Print on Demand", "E-book", "Global Retailers"],
         image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800&auto=format&fit=crop", // Books/Library
@@ -31,8 +31,8 @@ const cards = [
     },
     {
         id: 4,
-        title: "Strategic Marketing",
-        description: "Tailored campaigns to maximize your book's visibility and sales.",
+        title: "Targeted Marketing",
+        description: "A great book deserves visibility. We create tailored marketing strategies, connecting your story to the right audience through thoughtful campaigns and promotional support.",
         icon: <Megaphone size={24} />,
         tags: ["Social Media", "Book Tours", "PR Campaigns"],
         image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop", // Marketing/Team
