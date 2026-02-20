@@ -41,6 +41,7 @@ export default function Home() {
             <MainHeader />
           </div>
         </div>
+        <ExpandingCards />
 
         {/* Content on White Background */}
 
@@ -49,11 +50,11 @@ export default function Home() {
             <div className="max-w-6xl mx-auto text-center">
               <h2 className="text-3xl md:text-5xl font-bold leading-tight text-slate-900">
                 <span className="inline-block bg-[#4B9DA9] text-white px-2 py-1 rotate-[-2deg] mr-2 rounded-md">
-                  Lorem Ipsum
+                  A Record
                 </span>
-                Lorem sit amet
+                 of Thoughtful Work
                 <span className="inline-block bg-[#E37434] text-white px-2 py-1 rotate-[1deg] ml-2 rounded-md">
-                  sit amet boldly
+                  Work
                 </span>
               </h2>
             </div>
@@ -110,7 +111,7 @@ export default function Home() {
             </div>
           </div>
 
-          <ExpandingCards />
+          
 
           {/* <ContactCTA /> */}
           <FooterCTA />
