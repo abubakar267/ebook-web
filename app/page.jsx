@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <ExpandingCards />
 
-        <ExpandingCards />
+        {/* <ExpandingCards /> */}
 
         {/* Content on White Background */}
 
