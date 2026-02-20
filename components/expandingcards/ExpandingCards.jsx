@@ -46,11 +46,11 @@ const ExpandingCards = () => {
     return (
         <section className="py-20 px-4 bg-slate-50">
             <div className="max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <span className="text-sm font-bold tracking-[0.2em] text-[#2F7A85] uppercase block mb-3">
+                <div className="text-center mb-10 md:mb-16">
+                    <span className="text-xs md:text-sm font-bold tracking-[0.2em] text-[#2F7A85] uppercase block mb-3">
                         What We Do
                     </span>
-                    <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900">
+                    <h2 className="text-2xl md:text-5xl font-extrabold text-slate-900">
                         Services We Offer
                     </h2>
                 </div>
@@ -79,11 +79,11 @@ const ExpandingCards = () => {
                             <div className={`absolute inset-0 transition-opacity duration-[1500ms] bg-gradient-to-t ${activeId === card.id ? card.color : 'from-black/60 to-transparent'}`} />
 
                             {/* Content Container */}
-                            <div className="absolute inset-0 p-6 flex flex-col justify-between">
+                            <div className="absolute inset-0 p-4 md:p-6 flex flex-col justify-between">
 
                                 {/* Top Right Arrow (Only visible when active) */}
-                                <div className={`self-end bg-white/20 backdrop-blur-md p-3 rounded-full text-white transition-opacity duration-500 delay-100 ${activeId === card.id ? 'opacity-100' : 'opacity-0'}`}>
-                                    <ArrowUpRight size={24} />
+                                <div className={`self-end bg-white/20 backdrop-blur-md p-2 md:p-3 rounded-full text-white transition-opacity duration-500 delay-100 ${activeId === card.id ? 'opacity-100' : 'opacity-0'}`}>
+                                    <ArrowUpRight size={20} className="md:w-6 md:h-6" />
                                 </div>
 
                                 {/* Bottom Content */}
@@ -106,7 +106,7 @@ const ExpandingCards = () => {
                                         */}
                                         {/* Large Title (Active) */}
                                         <h3
-                                            className={`font-bold text-white leading-tight text-3xl mb-2 absolute top-0 left-0 whitespace-nowrap transition-opacity
+                                            className={`font-bold text-white leading-tight text-xl md:text-3xl mb-2 absolute top-0 left-0 whitespace-nowrap transition-opacity
                                             ${activeId === card.id
                                                     ? 'opacity-100 relative duration-[1500ms] delay-300'
                                                     : 'opacity-0 absolute duration-200 pointer-events-none'}`}
@@ -115,13 +115,10 @@ const ExpandingCards = () => {
                                             {card.title}
                                         </h3>
 
-                                        {/* Small Title (Inactive) */}
+                                        {/* Small Title (Inactive) - Hidden as per request */}
                                         <h3
-                                            className={`font-bold text-white leading-tight text-xl whitespace-nowrap transition-opacity
-                                            ${activeId === null
-                                                    ? 'opacity-100 relative duration-[1500ms] delay-300'
-                                                    : 'opacity-0 absolute duration-200 pointer-events-none'}`}
-                                            aria-hidden={activeId !== null}
+                                            className="font-bold text-white leading-tight text-lg md:text-xl whitespace-nowrap transition-opacity opacity-0 absolute duration-200 pointer-events-none"
+                                            aria-hidden="true"
                                         >
                                             {card.title}
                                         </h3>
@@ -129,7 +126,7 @@ const ExpandingCards = () => {
 
                                     {/* Description & Tags (Only visible when active) */}
                                     <div className={`space-y-4 overflow-hidden transition-[max-height,opacity] duration-[1500ms] ease-in-out ${activeId === card.id ? 'max-h-96 opacity-100 delay-[1000ms]' : 'max-h-0 opacity-0'}`}>
-                                        <p className="text-white/90 text-lg font-medium">
+                                        <p className="text-white/90 text-sm md:text-lg font-medium">
                                             {card.description}
                                         </p>
                                         <div className="flex flex-wrap gap-2">

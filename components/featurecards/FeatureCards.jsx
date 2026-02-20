@@ -81,7 +81,7 @@ const TestimonialCards = () => {
                                 }}
                                 loop={true}
                                 speed={800}
-                                className="!overflow-visible !pb-10"
+                                className="!overflow-visible !pb-3"
                             >
                                 {cards.map((card) => (
                                     <SwiperSlide key={card.id} className="!h-auto">

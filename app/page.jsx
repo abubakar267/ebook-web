@@ -43,6 +43,8 @@ export default function Home() {
         </div>
         <ExpandingCards />
 
+        <ExpandingCards />
+
         {/* Content on White Background */}
 
         <div>
@@ -73,7 +75,7 @@ export default function Home() {
             <div className="py-8">
 
 
-              <div className="w-full mt-15 mx-auto overflow-hidden">
+              <div className="w-full mt-2 mx-auto overflow-hidden">
 
                 <LogoLoop
                   logos={[
@@ -88,7 +90,7 @@ export default function Home() {
                   speed={30}
                   direction="left"
                   gap={20}
-                  logoHeight={80}
+                  logoHeight={140}
                   renderItem={(item) => (
                     <div className="flex items-center justify-center px-8 py-4 border border-slate-800 rounded-full bg-transparent mix-blend-multiply transition-all hover:bg-slate-50">
                       {/* Force logos to be black */}
@@ -111,7 +113,7 @@ export default function Home() {
             </div>
           </div>
 
-          
+
 
           {/* <ContactCTA /> */}
           <FooterCTA />
