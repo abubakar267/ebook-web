@@ -45,10 +45,10 @@ export default function Home() {
           </div>
         </div>
         <ExpandingCards />
-
+        {/* 
         <ServicesScroller/>
         <ServicesHero/>
-        <PromoBanner/>
+        <PromoBanner/> */}
 
         {/* <ExpandingCards /> */}
 
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="inline-block bg-[#4B9DA9] text-white px-2 py-1 rotate-[-2deg] mr-2 rounded-md">
                   A Record
                 </span>
-                 of Thoughtful Work
+                of Thoughtful Work
                 <span className="inline-block bg-[#E37434] text-white px-2 py-1 rotate-[1deg] ml-2 rounded-md">
                   Work
                 </span>

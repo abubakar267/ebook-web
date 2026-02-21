@@ -10,21 +10,21 @@ const MarketingCard = () => {
                     Marketing That Moves Books and Minds
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center relative">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 items-center relative">
 
                     {/* Left Column */}
                     <div className="space-y-12 text-center md:text-left order-2 md:order-1">
                         <div className="group">
                             <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1">Social Media Marketing</h3>
                             <p className="font-medium text-lg leading-relaxed">
-                                Promoting your book across platforms like Instagram, Facebook, TikTok, Twitter, and LinkedIn.
+                                We manage your online presence with thoughtful strategy, consistent engagement, and campaigns tailored to your audience
                             </p>
                         </div>
 
                         <div className="group">
-                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1">Email & Direct Marketing</h3>
-                            <p className="font-medium text-lg leading-relaxed">
-                                Reaching readers directly with targeted communication.
+                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1 whitespace-nowrap">Website & Direct Book Sales</h3>
+                            <p className="font-medium text-lg leading-relaxed ">
+                                Engage your audience directly with a personalized author website and streamlined book sales, giving you control over your brand and revenue.
                             </p>
                         </div>
                     </div>
@@ -115,9 +115,10 @@ const MarketingCard = () => {
                     <div className="space-y-12 text-center md:text-right order-3 relative">
                         {/* Card Styled Item */}
                         <div className="bg-white p-8 rounded-2xl shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-300 text-left relative z-20">
-                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1">Influencer & PR Marketing</h3>
+                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1">Global Publishing</h3>
                             <p className="font-medium text-lg leading-relaxed text-slate-700">
-                                Leveraging third-party voices to build credibility and buzz.
+                                Distribute your book on 50+ platforms across the USA and beyond, reaching readers worldwide while maintaining professional standards.
+
                             </p>
                             <div className="mt-4 flex gap-2">
                                 <div className="h-8 w-8 rounded-full bg-[#91C6BC]"></div>
@@ -127,9 +128,10 @@ const MarketingCard = () => {
                         </div>
 
                         <div className="group pt-4">
-                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1">Platform & Retail Marketing</h3>
+                            <h3 className="text-2xl font-bold mb-3 border-b-2 border-slate-900 inline-block pb-1 whitespace-nowrap">Researched Marketing Plans</h3>
                             <p className="font-medium text-lg leading-relaxed">
-                                Optimizing visibility and sales on online and physical marketplaces.
+                                Every campaign is backed by research, custom strategies, and actionable plans designed to maximize impact and reach the right readers.
+
                             </p>
                         </div>
                     </div>
