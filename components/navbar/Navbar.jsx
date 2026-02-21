@@ -18,12 +18,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Products', href: '/products', hasDropdown: true },
-    { name: 'Pricing', href: '/pricing', hasDropdown: false },
     { name: 'About', href: '/about', hasDropdown: false },
     { name: 'Contact', href: '/contact-us', hasDropdown: false },
-    { name: 'Resources', href: '/resources', hasDropdown: true },
-    { name: 'Bookstore', href: '/bookstore', hasDropdown: false },
+    { name: 'Services', href: '/services', hasDropdown: false },
   ];
 
   return (
