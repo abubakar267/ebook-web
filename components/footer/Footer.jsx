@@ -20,11 +20,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 mb-12">
           {/* Navigation Links */}
           <div className="flex flex-wrap justify-center md:justify-start gap-x-8 gap-y-4 text-sm font-semibold text-slate-800">
-            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Our Team</a>
-            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Newsroom</a>
-            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Community</a>
-            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Help</a>
-            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Developers</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">About us</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Services</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Contact us</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Portfolio</a>
+            <a href="#" className="hover:text-[#4B9DA9] transition-colors">Blog</a>
           </div>
 
           {/* Language Selector */}

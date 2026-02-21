@@ -11,26 +11,26 @@ const AboutUsHeader = () => {
     {
       id: 0,
       number: '01',
-      title: 'Segment',
-      description: 'Define your audience based on specific behaviors and attributes.'
+      title: '24/7 Support',
+      description: 'Always here to guide authors, day or night.'
     },
     {
       id: 1,
       number: '02',
-      title: 'Design',
-      description: 'Create beautiful, high-converting templates with our drag-and-drop editor.'
+      title: 'Genre-Specific Teams',
+      description: 'Experts in every genre, tailored to your story'
     },
     {
       id: 2,
       number: '03',
-      title: 'Send',
-      description: 'One-off announcements or automatically triggered flows.'
+      title: '22 Years in Business',
+      description: 'Two decades of publishing experience you can trust.'
     },
     {
       id: 3,
       number: '04',
-      title: 'Convert',
-      description: 'Track ROI and customer engagement in real-time with our dashboard.'
+      title: '25,000 Authors',
+      description: 'Over 25,000 authors have shared their stories with us.'
     }
   ];
 
@@ -50,7 +50,7 @@ const AboutUsHeader = () => {
           .float-5 { animation: float 9s ease-in-out infinite 2s; }
           .float-6 { animation: float 6.5s ease-in-out infinite 0.8s; }
         `}</style>
-        
+
         {/* Tags/Badges - Top Right */}
         <div className="absolute top-4 right-4 md:right-8 lg:right-12 flex flex-col md:flex-row flex-wrap gap-1.5 md:gap-3 lg:gap-4 z-20 max-w-md justify-end">
           <div className="bg-white/10 backdrop-blur-lg px-2 py-1 md:px-3 md:py-2 rounded-full flex items-center gap-1.5 border border-white/20 shadow-lg">
@@ -64,7 +64,7 @@ const AboutUsHeader = () => {
             <span className="text-[10px] md:text-xs font-medium">✨ Award Winning</span>
           </div>
         </div>
-        
+
         {/* Decorative Floating Circles */}
         <div className="absolute top-1/4 left-4 md:left-10 w-12 h-12 md:w-16 md:h-16 bg-white/20 rounded-full blur-sm float-1" />
         <div className="absolute bottom-1/15 left-20 md:left-32 w-16 h-16 md:w-20 md:h-20 bg-blue-200/40 rounded-full float-2" />
@@ -76,16 +76,15 @@ const AboutUsHeader = () => {
         {/* Hero Content */}
         <main className="relative z-10 flex flex-col items-start text-left mt-12 px-6 md:px-12 pt-12 md:pt-20 pb-20 md:pb-40">
           <BlurText
-            text="About Us"
-            className="text-4xl sm:text-5xl -mt-2 sm:-mt-0 font-bold mb-4 md:mb-6 leading-tight"
+            text="Where Stories Find Their True Voice"
+            className="text-1xl sm:text-5xl -mt-2 sm:-mt-0 font-bold mb-4 md:mb-6 leading-tight"
             delay={150}
             animateBy="words"
             direction="top"
           />
           <p className="max-w-xl text-base md:text-lg lg:text-xl opacity-90 mb-6 md:mb-10 leading-relaxed">
-            Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.
-            Track your daily routines, stay consistent, and turn goals into habits — all in one beautiful app.
-            
+            At Evercrest Publishing, we believe that every manuscript carries a unique story, one that deserves to be heard, polished, and shared with care. We don’t just help authors publish; we guide them through a thoughtful, structured journey from idea to audience.
+
           </p>
 
           {/* CTAs */}
@@ -150,7 +149,7 @@ const AboutUsHeader = () => {
           }
           .circular-text { animation: rotate 20s linear infinite; }
         `}</style>
-        
+
         {/* Circular Text - Top Right Quarter */}
         <div className="absolute -top-32 -right-32 sm:-top-40 sm:-right-40 md:-top-56 md:-right-56 lg:-top-64 lg:-right-64 w-64 h-64 sm:w-80 sm:h-80 md:w-[450px] md:h-[450px] lg:w-[500px] lg:h-[500px]">
           <svg viewBox="0 0 200 200" className="circular-text w-full h-full">
@@ -159,40 +158,37 @@ const AboutUsHeader = () => {
             </defs>
             <text className="text-xs sm:text-sm md:text-base lg:text-xl font-bold fill-black">
               <textPath href="#circlePath" startOffset="0%">
-                READ • LEARN • GROW • READ • LEARN • GROW • 
+                READ • LEARN • GROW • READ • LEARN • GROW •
               </textPath>
             </text>
           </svg>
         </div>
-  
+
         {/* Vertical Stepper */}
         <div className="flex flex-col space-y-0 max-w-md lg:max-w-lg z-10">
           {steps.map((step, index) => {
             const isActive = activeTab === index;
-            
+
             return (
-              <div 
-                key={step.id} 
+              <div
+                key={step.id}
                 className="group cursor-pointer relative"
                 onClick={() => setActiveTab(index)}
               >
                 <div className="flex items-start gap-4 md:gap-6 lg:gap-8 py-3 md:py-4">
-                  <span className={`text-xl md:text-2xl lg:text-3xl font-mono italic transition-colors duration-300 ${
-                    isActive ? 'text-black font-bold' : 'text-black/40'
-                  }`}>
+                  <span className={`text-xl md:text-2xl lg:text-3xl font-mono italic transition-colors duration-300 ${isActive ? 'text-black font-bold' : 'text-black/40'
+                    }`}>
                     {step.number}
                   </span>
 
                   <div className="flex flex-col">
-                    <h3 className={`text-xl md:text-2xl lg:text-4xl font-bold transition-colors duration-300 ${
-                      isActive ? 'text-black' : 'text-black/50'
-                    }`}>
+                    <h3 className={`text-xl md:text-2xl lg:text-4xl font-bold transition-colors duration-300 ${isActive ? 'text-black' : 'text-black/50'
+                      }`}>
                       {step.title}
                     </h3>
-                    
-                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      isActive ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
-                    }`}>
+
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isActive ? 'max-h-40 opacity-100 mt-2' : 'max-h-0 opacity-0'
+                      }`}>
                       <p className="text-black/70 leading-relaxed text-sm md:text-base lg:text-lg max-w-[250px] md:max-w-[300px] lg:max-w-[350px]">
                         {step.description}
                       </p>
@@ -213,9 +209,9 @@ const AboutUsHeader = () => {
         </div>
 
         {/* Lady Reading Book Image */}
-        <img 
-          src="/lady-reading-book.png" 
-          alt="Lady reading book" 
+        <img
+          src="/lady-reading-book.png"
+          alt="Lady reading book"
           className="absolute bottom-0 right-0 w-42 sm:w-40 md:w-56 lg:w-120 h-auto object-contain md:opacity-100 opacity-30"
         />
       </div>
