@@ -12,6 +12,9 @@ import ContactCTA from "../components/contactcta/ContactCTA";
 import FooterCTA from "../components/footercta/FooterCTA";
 import ExpandingCards from "../components/expandingcards/ExpandingCards";
 import LogoLoop from "../components/logoloop/LogoLoop";
+import ServicesScroller from "@/components/servicescomponent/ServiceScroller";
+import ServicesHero from "@/components/servicescomponent/ServicesHero";
+import PromoBanner from "@/components/storybanner/PromoBanner";
 
 const logos = [
   { src: "https://cdn.simpleicons.org/typescript", alt: "TypeScript", width: 50, height: 50 },
@@ -42,6 +45,10 @@ export default function Home() {
           </div>
         </div>
         <ExpandingCards />
+
+        <ServicesScroller/>
+        <ServicesHero/>
+        <PromoBanner/>
 
         {/* <ExpandingCards /> */}
 
